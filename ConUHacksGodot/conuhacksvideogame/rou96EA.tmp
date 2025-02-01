@@ -1,17 +1,13 @@
-[gd_scene load_steps=4 format=3 uid="uid://ccwsy4sqqun1"]
+[gd_scene load_steps=3 format=3 uid="uid://ccwsy4sqqun1"]
 
 [ext_resource type="Script" path="res://scripts/game.gd" id="1_6f5yr"]
 [ext_resource type="PackedScene" uid="uid://bibkoy67pb64u" path="res://scenes/player1.tscn" id="1_7wsrx"]
-[ext_resource type="PackedScene" uid="uid://f2i42fmqfya5" path="res://scenes/player2.tscn" id="3_jhf1s"]
 
 [node name="Round" type="Node2D"]
 script = ExtResource("1_6f5yr")
 
 [node name="player1" parent="." instance=ExtResource("1_7wsrx")]
 position = Vector2(198, 194)
-
-[node name="player2" parent="." instance=ExtResource("3_jhf1s")]
-position = Vector2(823, 404)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(578, 323)
@@ -37,5 +33,5 @@ bbcode_enabled = true
 
 [node name="PlayerTwoRoundsText" type="RichTextLabel" parent="UILayer/UI_Control"]
 layout_mode = 0
-offset_right = 1152.0
+offset_right = 40.0
 offset_bottom = 40.0

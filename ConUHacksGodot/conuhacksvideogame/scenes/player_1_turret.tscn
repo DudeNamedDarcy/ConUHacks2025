@@ -1,15 +1,15 @@
 [gd_scene load_steps=3 format=3 uid="uid://nueqfa5l5vgl"]
 
-[ext_resource type="Script" path="res://turret.gd" id="1_o0jj4"]
-[ext_resource type="Texture2D" uid="uid://ccu2evycb2xuf" path="res://icon.svg" id="2_qo40m"]
+[ext_resource type="Script" path="res://turret.gd" id="1_p1xoj"]
+[ext_resource type="Texture2D" uid="uid://ccu2evycb2xuf" path="res://icon.svg" id="2_45gpu"]
 
-[node name="Turret" type="Node2D"]
-position = Vector2(295, 235)
+[node name="Player1Turret" type="Node2D"]
 rotation = -1.5708
-script = ExtResource("1_o0jj4")
+script = ExtResource("1_p1xoj")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("2_qo40m")
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_45gpu")
 
 [node name="BulletFireTimer" type="Timer" parent="."]
 wait_time = 0.5

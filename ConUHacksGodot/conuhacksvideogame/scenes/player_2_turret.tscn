@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://bjwl7c86pmnc0"]
+
+[ext_resource type="Script" path="res://turret_for_player_two.gd" id="1_0cysd"]
+[ext_resource type="Texture2D" uid="uid://ccu2evycb2xuf" path="res://icon.svg" id="2_b2qpd"]
+
+[node name="Player2Turret" type="Node2D"]
+rotation = 1.5708
+script = ExtResource("1_0cysd")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_b2qpd")
+
+[node name="BulletFireTimer" type="Timer" parent="."]
+wait_time = 0.5
+autostart = true
+
+[connection signal="timeout" from="BulletFireTimer" to="." method="_on_bullet_fire_timer_timeout"]

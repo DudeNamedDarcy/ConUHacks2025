@@ -1,5 +1,5 @@
 extends Node2D
-@onready var bullet = preload("res://scenes/projectile_turret_one.tscn")
+@onready var bullet = preload("res://scenes/projectile_turret_two.tscn")
 @onready var bullet_fire_timer: Timer = $BulletFireTimer
 
 # Called when the node enters the scene tree for the first time.

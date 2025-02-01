@@ -3,8 +3,8 @@ extends CharacterBody2D
 
 @export var move_speed: float = 100
 
-@onready var turret = preload("res://scenes/turret.tscn")
-@onready var main = get_tree().get_root().get_node("Round")
+@onready var turret = preload("res://scenes/player_1_turret.tscn")
+@onready var main = get_tree().get_root().get_node(".") #gets the top node of the level as a variable
 
 func _ready() -> void:
 	pass
@@ -24,9 +24,9 @@ func _physics_process(delta):
 		place_turret()
 
 func place_turret():
-	var turret_instance = turret.instantiate()
-	turret_instance.position = position
-	main.add_child.call_deferred(turret_instance)
+	var turret_instance = turret.instantiate() #creates a clone of the turret
+	turret_instance.position = position #makes the position of the turret the same as the player
+	main.add_child.call_deferred(turret_instance) # makes the turret a child of the level, not the child, so it doesn't move with the player
 
 ##func shoot():
 	#const BULLET_SCENE = preload("res://scenes/bullet.tscn")

@@ -1,8 +1,9 @@
 extends CharacterBody2D
 
 @export var move_speed: float = 100
-const BULLET_SCENE = preload("res://scenes/bullet.tscn")
-@onready var bullet_spawner: Node2D = $BulletSpawner
+
+@onready var turret = preload("res://scenes/player_2_turret.tscn")
+@onready var main = get_tree().get_root().get_node(".") #gets the top node of the level as a variable
 
 func _physics_process(_delta):
 	var input_direction = Vector2(
@@ -12,10 +13,12 @@ func _physics_process(_delta):
 
 	velocity = input_direction * move_speed  # Use the built-in velocity property
 	
-	if Input.is_action_just_pressed("player1SHOOT"):
-		print("shooting!")
-		var bullet = BULLET_SCENE.instantiate() #makes a copy of the bullet scene
-		var tree = get_tree().current_scene
-		tree.add_child(bullet) #add the bullet clone to the tree of this scene
-		bullet.position = bullet_spawner.position
 	move_and_slide()
+	
+	if Input.is_action_just_pressed("player2SHOOT"):
+		place_turret()
+
+func place_turret():
+	var turret_instance = turret.instantiate() #creates a clone of the turret
+	turret_instance.position = position #makes the position of the turret the same as the player
+	main.add_child.call_deferred(turret_instance) # makes the turret a child of the level, not the child, so it doesn't move with the player

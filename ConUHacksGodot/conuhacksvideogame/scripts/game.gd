@@ -7,13 +7,13 @@ extends Node2D
 @onready var player_one_score: Node2D = $score1
 @onready var player_two_score: Node2D = $score2
 
-@onready var player_one_rounds_text: RichTextLabel = $UI/UI_Control/PlayerOneRoundsText
-@onready var player_two_rounds_text: RichTextLabel = $UI/UI_Control/PlayerTwoRoundsText
-
+@onready var player_one_rounds_text: RichTextLabel = $UILayer/UI_Control/PlayerOneRoundsText
+@onready var player_two_rounds_text: RichTextLabel = $UILayer/UI_Control/PlayerTwoRoundsText
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	player_one_rounds_text.text = "Player 1: 0"
+	player_two_rounds_text.text = "Player 2: 0"
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
