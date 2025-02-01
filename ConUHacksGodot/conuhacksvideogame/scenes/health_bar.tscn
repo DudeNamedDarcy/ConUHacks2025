@@ -14,3 +14,10 @@ modulate = Color(0, 1, 0, 1)
 offset_right = 203.0
 offset_bottom = 27.0
 step = 1.0
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="."]
+offset_left = 61.0
+offset_top = 30.0
+offset_right = 182.0
+offset_bottom = 70.0
+text = "You Died!"

@@ -6,6 +6,8 @@ var health = 100
 var Health_label = RichTextLabel
 var HP_perc = ProgressBar
 
+
+
 func update_health_bar():
 	$Health_bar.value = health
 	
@@ -26,6 +28,7 @@ func _process(_delta: float) -> void:
 	
 	if health == 0:
 		print("You died!")
+		$RichTextLabel2.visible = true
 		
 	if Input.get_action_strength("Damage"):
 		take_damage(1)
@@ -35,4 +38,5 @@ func _process(_delta: float) -> void:
 func _ready() -> void:
 	health = max_health
 	update_health_bar()
+	$RichTextLabel2.visible = false
 	
