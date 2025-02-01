@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://de4ojcmgcecdn"]
 
-[ext_resource type="Script" path="res://scenes/overtime_zone.gd" id="1_ryett"]
+[ext_resource type="Script" path="res://scripts/overtime_zone.gd" id="1_ryett"]
 [ext_resource type="Texture2D" uid="uid://ccu2evycb2xuf" path="res://icon.svg" id="2_xm4j0"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tpkii"]
