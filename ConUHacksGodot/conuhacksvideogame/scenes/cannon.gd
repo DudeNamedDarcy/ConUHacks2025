@@ -5,7 +5,7 @@ extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	shoot()
 
 func shoot():
 	var instance = projectile.instantiate()
@@ -16,4 +16,6 @@ func shoot():
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	shoot()
+	if Input.is_action_just_pressed("player1RIGHT"):
+		rotation += 45
+		shoot()

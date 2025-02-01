@@ -33,4 +33,4 @@ func shoot():
 	bullet_instance.direction = bullet_spawner.rotation
 	bullet_instance.spawnPosition = bullet_spawner.position
 	bullet_instance.spawnRotation = bullet_spawner.rotation
-	add_child.call_deferred(bullet_instance)
+	main.add_child.call_deferred(bullet_instance)
