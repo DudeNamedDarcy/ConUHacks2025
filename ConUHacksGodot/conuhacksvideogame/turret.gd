@@ -1,6 +1,7 @@
 extends Node2D
 @onready var bullet = preload("res://scenes/projectile_turret_one.tscn")
 @onready var bullet_fire_timer: Timer = $BulletFireTimer
+@onready var main = get_tree().get_root().get_node(".") #gets the top node of the level as a variable
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -18,4 +19,8 @@ func _on_bullet_fire_timer_timeout() -> void:
 	print(bullet.direction)
 	bullet.spawnPosition = global_position
 	bullet.spawnRotation = rotation
-	add_child.call_deferred(bullet)
+	main.add_child.call_deferred(bullet)
+
+
+func _on_death_timer_timeout() -> void:
+	queue_free()

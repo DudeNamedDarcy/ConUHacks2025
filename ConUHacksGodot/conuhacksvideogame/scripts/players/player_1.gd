@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 
-@export var move_speed: float = 100
+@export var move_speed: float = 250
 
 @onready var turret = preload("res://scenes/player_1_turret.tscn")
 @onready var main = get_tree().get_root().get_node(".") #gets the top node of the level as a variable
@@ -39,3 +39,8 @@ func place_turret():
 	#bullet_instance.spawnPosition = bullet_spawner.position
 	#bullet_instance.spawnRotation = bullet_spawner.rotation
 	#main.add_child.call_deferred(bullet_instance)
+
+
+func _on_area_2d_body_entered(body: Node2D) -> void:
+	if body.name.match("projectile"):
+		print("health DAMAGE!!!")
