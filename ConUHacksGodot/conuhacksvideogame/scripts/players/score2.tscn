@@ -1,0 +1,28 @@
+[gd_scene load_steps=2 format=3 uid="uid://dtpllsk1axdh0"]
+
+[sub_resource type="GDScript" id="GDScript_hfi8u"]
+script/source = "extends Node2D
+
+@onready var score_2_label: Label = $score2Label
+
+var score2 = 0
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	score_2_label.text = \"Player 2 Score : \" + str(score2)
+
+func _addtoScore2():
+	score2 = score2 + 200
+	
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+"
+
+[node name="score2" type="Node2D"]
+script = SubResource("GDScript_hfi8u")
+
+[node name="score2Label" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "[Player 2's score displayed here]"
