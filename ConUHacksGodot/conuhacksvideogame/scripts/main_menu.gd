@@ -24,7 +24,7 @@ func make_random_tip():
 	tip_text.text = tips_array[chosen_tip]
 
 func _on_start_button_button_down() -> void: #when start button is pressed
-	get_tree().change_scene_to_file("res://scenes/Test1.tscn")
+	get_tree().change_scene_to_file("res://scenes/game.tscn")
 	print("Start Button Pressed...")
 	
 

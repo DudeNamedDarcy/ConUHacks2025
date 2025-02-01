@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://bkotwm5coqp5t"]
+
+[ext_resource type="Texture2D" uid="uid://ccu2evycb2xuf" path="res://icon.svg" id="1_2wwtj"]
+[ext_resource type="Script" path="res://scenes/cannon.gd" id="1_p6iq8"]
+
+[node name="ShootTest" type="Node2D"]
+
+[node name="Cannon" type="Node2D" parent="."]
+script = ExtResource("1_p6iq8")
+
+[node name="Sprite2D" type="Sprite2D" parent="Cannon"]
+texture = ExtResource("1_2wwtj")
+
+[node name="Camera2D" type="Camera2D" parent="."]

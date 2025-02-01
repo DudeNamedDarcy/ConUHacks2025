@@ -16,3 +16,6 @@ texture = SubResource("CanvasTexture_n631v")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_0gij7")
+
+[node name="BulletSpawner" type="Node2D" parent="."]
+position = Vector2(28, 0)

@@ -1,4 +1,11 @@
-[gd_scene load_steps=4 format=3 uid="uid://bif1jfpq2yap3"]
+[gd_scene load_steps=6 format=3 uid="uid://bif1jfpq2yap3"]
+
+[sub_resource type="Gradient" id="Gradient_28ifm"]
+offsets = PackedFloat32Array(0.704918, 1)
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_r7gqk"]
+gradient = SubResource("Gradient_28ifm")
 
 [sub_resource type="Curve" id="Curve_pv143"]
 _data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), -2.10307, 0.0, 0, 0]
@@ -17,9 +24,11 @@ gravity = Vector3(0, 0, 0)
 scale_max = 3.0
 scale_curve = SubResource("CurveTexture_lbv5s")
 color = Color(1, 0.0569822, 0.303733, 1)
+color_ramp = SubResource("GradientTexture1D_r7gqk")
 
 [node name="BloodHitParticles" type="Node2D"]
 
 [node name="GPUParticles2D" type="GPUParticles2D" parent="."]
 process_material = SubResource("ParticleProcessMaterial_4kfgn")
+lifetime = 0.65
 explosiveness = 0.8

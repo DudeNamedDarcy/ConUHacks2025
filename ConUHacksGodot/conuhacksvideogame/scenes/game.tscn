@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://dlexdrbwocdlj"]
+[gd_scene load_steps=3 format=3 uid="uid://dlexdrbwocdlj"]
 
 [ext_resource type="Script" path="res://scripts/game.gd" id="1_ahxkd"]
+[ext_resource type="Script" path="res://scripts/camera_shake.gd" id="2_hym4a"]
 
 [node name="game" type="Node2D"]
 script = ExtResource("1_ahxkd")
@@ -38,3 +39,7 @@ offset_bottom = -141.0
 grow_horizontal = 2
 grow_vertical = 2
 text = "Player 2 Rounds Won:"
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(575, 327)
+script = ExtResource("2_hym4a")
