@@ -3,7 +3,6 @@ extends Node2D
 
 @export var max_health = 100
 var health = 100
-var Health_label = RichTextLabel
 var HP_perc = ProgressBar
 
 
@@ -17,7 +16,6 @@ func take_damage(damage):
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
-	Health_label = $RichTextLabel
 	HP_perc = $Health_bar
 	
 	if health <= 25:
@@ -28,7 +26,7 @@ func _process(_delta: float) -> void:
 	
 	if health == 0:
 		print("You died!")
-		$RichTextLabel2.visible = true
+		$RichTextLabel.visible = true
 		
 	if Input.get_action_strength("Damage"):
 		take_damage(1)
@@ -38,5 +36,5 @@ func _process(_delta: float) -> void:
 func _ready() -> void:
 	health = max_health
 	update_health_bar()
-	$RichTextLabel2.visible = false
+	$RichTextLabel.visible = false
 	
