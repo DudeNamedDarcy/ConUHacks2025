@@ -10,8 +10,6 @@ extends Node2D
 @onready var player_one_rounds_text: RichTextLabel = $UI/UI_Control/PlayerOneRoundsText
 @onready var player_two_rounds_text: RichTextLabel = $UI/UI_Control/PlayerTwoRoundsText
 
-var player1WINS = false
-var player2WINS = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
