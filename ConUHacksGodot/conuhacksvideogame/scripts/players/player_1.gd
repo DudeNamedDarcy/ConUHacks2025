@@ -1,22 +1,12 @@
 extends CharacterBody2D
 
-const SPEED = 200
+@export var move_speed: float = 100
 
-# ignore this
-# var velocity = Vector2.ZERO
+func _physics_process(_delta):
+	var input_direction = Vector2(
+		Input.get_action_strength("player1RIGHT") - Input.get_action_strength("player1LEFT"),
+		Input.get_action_strength("player1DOWN") - Input.get_action_strength("player1UP")
+	)
 
-func _physics_process(delta: float) -> void:
-	velocity.x = 0
-	velocity.y = 0
-	
-	if Input.is_action_pressed("player1RIGHT"):
-		velocity.x += SPEED
-	elif Input.is_action_pressed("player1LEFT"):
-		velocity.x -= SPEED
-	
-	if Input.is_action_pressed("player1DOWN"):
-		velocity.y += SPEED
-	elif Input.is_action_pressed("player1UP"):
-		velocity.y -= SPEED
-	
-	move_and_collide(velocity * delta)
+	velocity = input_direction * move_speed  # Use the built-in velocity property
+	move_and_slide()

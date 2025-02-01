@@ -16,5 +16,3 @@ texture = SubResource("CanvasTexture_n631v")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_0gij7")
-
-[node name="Camera2D" type="Camera2D" parent="."]
