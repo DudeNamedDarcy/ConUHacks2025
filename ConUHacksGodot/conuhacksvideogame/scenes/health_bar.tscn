@@ -4,8 +4,6 @@
 
 [node name="HealthBar" type="Node2D"]
 script = ExtResource("1_wx3e2")
-LOW_HP = Color(1, 0, 0, 1)
-Og_HP = Color(0, 1, 0, 1)
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
 offset_right = 40.0
