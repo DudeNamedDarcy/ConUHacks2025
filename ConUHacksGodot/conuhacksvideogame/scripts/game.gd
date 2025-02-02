@@ -43,6 +43,7 @@ func player_one_round_won():
 	player_one_rounds += 1
 	if (player_one_rounds >= 5):
 		player_one_rounds_text.text = "Player 1 Won!!!"
+		get_tree().change_scene_to_file("res://scenes/intermission.tscn")
 		#player_one_score.addtoScore1()
 	else:
 		player_one_rounds_text.text = "Player 1 Rounds Won: " + str(player_one_rounds) #str() turns integer into a String	
@@ -53,6 +54,7 @@ func player_two_round_won():
 	player_two_rounds += 1
 	if (player_two_rounds >= 5):
 		player_two_rounds_text.text = "Player 2 Won!"
+		get_tree().change_scene_to_file("res://scenes/intermission.tscn")
 		#player_two_rounds_text.text = "Player 2 Won!!!"
 		#player_two_score.addtoScore2()
 	else:
