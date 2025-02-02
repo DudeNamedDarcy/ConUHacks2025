@@ -21,6 +21,7 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body.name.match("player1"): #checks if body hit is from player1
 		damage_player_one()
 
+
 	if body.name.match("player2"): #checks if body hit is from player2
 		damage_player_two()
 

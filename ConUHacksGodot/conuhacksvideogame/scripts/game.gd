@@ -42,7 +42,8 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	HP._ready()
 	HP._process(0.0)
-	
+	if $AudioStreamPlayer2D.stream != BG:
+		$AudioStreamPlayer2D.play()
 
 func set_up_for_round():
 	player_1.position = Vector2(300, 200)

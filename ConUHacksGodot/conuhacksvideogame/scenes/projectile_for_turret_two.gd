@@ -7,6 +7,7 @@ var spawnPosition: Vector2
 var spawnRotation: float
 signal decrease_health_two
 
+
 func _ready() -> void:
 	global_position = spawnPosition
 	global_rotation = spawnRotation
