@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b7ku1p3vfr8b1"
-path="res://.godot/imported/Ship_up_1.png-17726c9b4cc0f387d134a03f885d8b2c.ctex"
+uid="uid://oh1chhp80s1v"
+path="res://.godot/imported/turret1.png-c8c2f7753240e0a64c6e498d1bcae19c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Ship_up_1.png"
-dest_files=["res://.godot/imported/Ship_up_1.png-17726c9b4cc0f387d134a03f885d8b2c.ctex"]
+source_file="res://Sprites/turret1.png"
+dest_files=["res://.godot/imported/turret1.png-c8c2f7753240e0a64c6e498d1bcae19c.ctex"]
 
 [params]
 
