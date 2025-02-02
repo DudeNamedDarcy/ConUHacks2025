@@ -85,6 +85,7 @@ text = "[center] Player Two Rounds Won: [/center]"
 fit_content = true
 
 [node name="PlayerOneScoreText" type="RichTextLabel" parent="UILayer/UI_Control"]
+visible = false
 layout_mode = 0
 offset_left = 24.0
 offset_top = 49.0
@@ -94,6 +95,7 @@ scale = Vector2(1.67321, 1.59561)
 text = "Score P1"
 
 [node name="PlayerTwoScoreText" type="RichTextLabel" parent="UILayer/UI_Control"]
+visible = false
 layout_mode = 0
 offset_left = 523.0
 offset_top = 49.0

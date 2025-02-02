@@ -1,4 +1,6 @@
-[gd_scene load_steps=16 format=3 uid="uid://dbubfio0krv2e"]
+[gd_scene load_steps=17 format=3 uid="uid://dbubfio0krv2e"]
+
+[ext_resource type="Script" path="res://blood_hit_particles.gd" id="1_748ba"]
 
 [sub_resource type="Gradient" id="Gradient_28ifm"]
 offsets = PackedFloat32Array(0.704918, 1)
@@ -22,7 +24,8 @@ spread = 180.0
 initial_velocity_min = 30.0
 initial_velocity_max = 60.0
 gravity = Vector3(0, 0, 0)
-scale_max = 3.0
+scale_min = 4.0
+scale_max = 6.0
 scale_curve = SubResource("CurveTexture_lbv5s")
 color = Color(1, 0.530727, 0.324897, 1)
 color_ramp = SubResource("GradientTexture1D_r7gqk")
@@ -49,7 +52,8 @@ spread = 180.0
 initial_velocity_min = 30.0
 initial_velocity_max = 60.0
 gravity = Vector3(0, 0, 0)
-scale_max = 3.0
+scale_min = 4.0
+scale_max = 6.0
 scale_curve = SubResource("CurveTexture_4427m")
 color = Color(1, 0.792157, 0.32549, 1)
 color_ramp = SubResource("GradientTexture1D_v831w")
@@ -76,28 +80,39 @@ spread = 180.0
 initial_velocity_min = 30.0
 initial_velocity_max = 60.0
 gravity = Vector3(0, 0, 0)
-scale_max = 2.0
+scale_min = 4.0
+scale_max = 6.0
 scale_curve = SubResource("CurveTexture_ax0eo")
 color = Color(1, 0.894118, 0.32549, 1)
 color_ramp = SubResource("GradientTexture1D_icskg")
 
 [node name="BloodHitParticles" type="Node2D"]
+z_index = 10
+scale = Vector2(2, 2)
+script = ExtResource("1_748ba")
 
 [node name="OrangeExplosion" type="GPUParticles2D" parent="."]
+scale = Vector2(3, 3)
 amount = 20
 process_material = SubResource("ParticleProcessMaterial_4kfgn")
-lifetime = 0.65
+lifetime = 0.5
 explosiveness = 0.8
 
 [node name="BrightOrangeExplosion" type="GPUParticles2D" parent="."]
-visible = false
 amount = 20
 process_material = SubResource("ParticleProcessMaterial_fh7lp")
-lifetime = 0.65
+lifetime = 0.5
 explosiveness = 0.8
 
 [node name="YellowExplosion" type="GPUParticles2D" parent="."]
 amount = 20
 process_material = SubResource("ParticleProcessMaterial_m7ihy")
-lifetime = 0.65
+lifetime = 0.5
 explosiveness = 0.8
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.5
+one_shot = true
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

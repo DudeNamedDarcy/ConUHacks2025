@@ -6,6 +6,9 @@ var direction: float
 var spawnPosition: Vector2
 var spawnRotation: float
 var projectile_health = 100
+
+@export var explosion: PackedScene = preload("res://blood_hit_particles.tscn")
+
 signal decreaseHealthOne
 
 func _ready() -> void:
@@ -39,3 +42,7 @@ func damage_player_two():
 
 func _on_visible_on_screen_notifier_2d_screen_exited() -> void:
 	queue_free()
+
+func spawn_explosion_particles(pos: Vector2) -> void:
+	var instance = explosion.instantiate()
+	get_tree().get_current_scene().add_child(instance)

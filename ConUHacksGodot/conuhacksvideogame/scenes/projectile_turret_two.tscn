@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://dg0in2lqik1l0"]
+[gd_scene load_steps=5 format=3 uid="uid://des1ryt20rbkd"]
 
 [ext_resource type="Script" path="res://scenes/projectile_for_turret_two.gd" id="1_m00t1"]
 [ext_resource type="Texture2D" uid="uid://ck408p6m62v7x" path="res://Sprites/Bullet.png" id="2_o7ffp"]
@@ -30,7 +30,6 @@ shape = SubResource("CircleShape2D_ynvnc")
 [node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
-volume_db = 24.0
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]
