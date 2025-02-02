@@ -1,8 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://ccwsy4sqqun1"]
+[gd_scene load_steps=4 format=3 uid="uid://dh5xqfpx2iuxo"]
 
 [ext_resource type="Script" path="res://scripts/game.gd" id="1_6f5yr"]
 [ext_resource type="PackedScene" uid="uid://bibkoy67pb64u" path="res://scenes/player1.tscn" id="1_7wsrx"]
-[ext_resource type="PackedScene" uid="uid://f2i42fmqfya5" path="res://scenes/player2.tscn" id="3_jhf1s"]
+[ext_resource type="PackedScene" uid="uid://c1rn7agd67vif" path="res://scenes/player2.tscn" id="3_jhf1s"]
 
 [node name="Round" type="Node2D"]
 script = ExtResource("1_6f5yr")

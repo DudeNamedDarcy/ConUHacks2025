@@ -16,7 +16,7 @@ var allowed_to_place = true
 signal PlayerTwoDead
 
 func _physics_process(_delta):
-	this_player_two_health = Global.player_two_healthsd
+	this_player_two_health = Global.player_two_health
 	var input_direction = Vector2(
 		Input.get_action_strength("player2RIGHT") - Input.get_action_strength("player2LEFT"),
 		Input.get_action_strength("player2DOWN") - Input.get_action_strength("player2UP")

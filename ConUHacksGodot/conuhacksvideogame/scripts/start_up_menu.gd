@@ -20,7 +20,7 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	check_if_both_are_ready()
 	if (are_both_players_ready == true):
-		get_tree().change_scene_to_file("res://round.tscn")
+		get_tree().change_scene_to_file("res://scenes/intermission.tscn")
 
 	if Input.is_action_just_pressed("player1SHOOT"):
 		player_one_ready = true

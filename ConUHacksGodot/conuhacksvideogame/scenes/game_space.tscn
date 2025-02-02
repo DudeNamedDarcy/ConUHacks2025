@@ -1,0 +1,19 @@
+[gd_scene load_steps=2 format=3 uid="uid://bngqs2sqgj5j6"]
+
+[ext_resource type="Script" path="res://scenes/game_space.gd" id="1_5g2s6"]
+
+[node name="game_space" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_5g2s6")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(29.0233, 16.7563)
+color = Color(0, 0, 0, 1)
