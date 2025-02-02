@@ -13,9 +13,9 @@ func _ready() -> void:
 func _physics_process(delta):
 	var input_direction = Vector2(
 		Input.get_action_strength("player1RIGHT") - Input.get_action_strength("player1LEFT"),
-		Input.get_action_strength("player1DOWN") - Input.get_action_strength("player1UP")
-	)
-
+		Input.get_action_strength("player1DOWN") - Input.get_action_strength("player1UP"))
+	rotation = 90
+	
 	velocity = input_direction * move_speed  # Use the built-in velocity property
 	rotation = velocity.angle()
 	move_and_slide()

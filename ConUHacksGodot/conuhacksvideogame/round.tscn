@@ -3,8 +3,8 @@
 [ext_resource type="Script" path="res://scripts/game.gd" id="1_6f5yr"]
 [ext_resource type="PackedScene" uid="uid://bibkoy67pb64u" path="res://scenes/player1.tscn" id="1_7wsrx"]
 [ext_resource type="PackedScene" uid="uid://f2i42fmqfya5" path="res://scenes/player2.tscn" id="3_jhf1s"]
-[ext_resource type="PackedScene" uid="uid://pvdvch76a3da" path="res://scenes/projectile_turret_one.tscn" id="4_7op5h"]
-[ext_resource type="PackedScene" uid="uid://des1ryt20rbkd" path="res://scenes/projectile_turret_two.tscn" id="5_8cd50"]
+[ext_resource type="PackedScene" uid="uid://pvdvch76a3da" path="res://scenes/projectile.tscn" id="4_7op5h"]
+[ext_resource type="PackedScene" path="res://scenes/projectile_turret_two.tscn" id="5_8cd50"]
 
 [node name="Round" type="Node2D"]
 script = ExtResource("1_6f5yr")
