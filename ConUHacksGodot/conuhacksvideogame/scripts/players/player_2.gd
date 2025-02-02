@@ -11,10 +11,15 @@ func _physics_process(_delta):
 		Input.get_action_strength("player2RIGHT") - Input.get_action_strength("player2LEFT"),
 		Input.get_action_strength("player2DOWN") - Input.get_action_strength("player2UP")
 	)
-
+	var prev = Vector2(input_direction)
+	
 	velocity = input_direction * move_speed  # Use the built-in velocity property
 	rotation = velocity.angle()
 	move_and_slide()
+	
+	if input_direction == Vector2(0,0) and prev != Vector2(0,0):
+		$Sprite2D.look_at(Vector2())
+		prev = Vector2(0,0)
 	
 	if Input.is_action_just_pressed("player2SHOOT"):
 		place_turret()
