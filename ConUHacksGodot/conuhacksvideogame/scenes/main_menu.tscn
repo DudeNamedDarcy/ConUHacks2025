@@ -76,7 +76,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("3_o1pn4")
 bbcode_enabled = true
-text = "[center] [tornado] Made by: Darcy, Daniela and Catherine  
+text = "[center] [tornado] Made by: All Bark, No Byte 
 [/tornado][center]"
 fit_content = true
 
