@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=3 uid="uid://cls5gye2ffch0"]
+[gd_scene load_steps=3 format=3 uid="uid://brxdltyj0633k"]
 
 [ext_resource type="Script" path="res://health_bar.gd" id="1_wx3e2"]
 [ext_resource type="Theme" uid="uid://j8m37612a0eo" path="res://SubTitleTheme.tres" id="2_niw75"]

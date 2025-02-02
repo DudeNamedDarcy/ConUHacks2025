@@ -19,8 +19,12 @@ config/icon="res://icon.svg"
 [autoload]
 
 Global="*res://global.gd"
-Player2="*res://scripts/players/player_2.gd"
 Projectile="*res://scenes/projectile.gd"
+Player2="*res://scripts/players/player_2.gd"
+
+[display]
+
+window/stretch/mode="canvas_items"
 
 [input]
 
