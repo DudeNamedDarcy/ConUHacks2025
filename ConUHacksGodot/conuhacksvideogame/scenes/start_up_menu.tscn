@@ -123,6 +123,7 @@ text = "[center] READY [/center] "
 
 [node name="P1Instructions" type="RichTextLabel" parent="CanvasLayer/Player2SetUpText"]
 layout_mode = 0
+offset_left = -21.0
 offset_top = 67.0
 offset_right = 287.0
 offset_bottom = 247.0
