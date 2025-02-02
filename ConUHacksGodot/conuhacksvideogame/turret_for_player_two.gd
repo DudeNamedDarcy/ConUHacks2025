@@ -15,14 +15,15 @@ func _process(delta: float) -> void:
 
 
 func _on_bullet_fire_timer_timeout() -> void:
-	$AudioListener2D/SingleGunshot.play()
-	await $AudioListener2D/SingleGunshot.finished
+	
 	var bullet = bullet.instantiate()
 	bullet.direction = randf_range(rotation - 0.7, rotation + 0.7)
 	print(bullet.direction)
 	bullet.spawnPosition = global_position
 	bullet.spawnRotation = rotation
 	main.add_child.call_deferred(bullet)
+	$AudioListener2D/SingleGunshot.play()
+	await $AudioListener2D/SingleGunshot.finished
 
 
 func _on_death_timer_timeout() -> void:
