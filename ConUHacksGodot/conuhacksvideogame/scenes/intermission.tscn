@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://sax6jjs26fgs"]
+[gd_scene load_steps=4 format=3 uid="uid://e3l20wivrdhj"]
 
 [ext_resource type="Script" path="res://scenes/intermission.gd" id="1_24w8j"]
+[ext_resource type="Theme" uid="uid://dfjvbpbn8v7j0" path="res://TitleTheme.tres" id="2_hrikp"]
 [ext_resource type="AudioStream" uid="uid://x8eop2bn82x" path="res://Sounds/Player_hit.mp3" id="2_wk2yc"]
 
 [node name="intermission" type="Control"]
@@ -9,42 +10,19 @@ layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -3.0
-offset_top = -6.0
-offset_right = -3.0
-offset_bottom = -6.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_24w8j")
 OgColor = Color(1, 1, 1, 1)
 
 [node name="ColorRect" type="ColorRect" parent="."]
-layout_mode = 0
-offset_left = -6.0
-offset_top = -6.0
-offset_right = 34.0
-offset_bottom = 34.0
-scale = Vector2(28.872, 16.3996)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 color = Color(0, 0, 0, 1)
-
-[node name="Label" type="Label" parent="."]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 23.0
-
-[node name="RichTextLabel" type="RichTextLabel" parent="."]
-texture_filter = 1
-clip_contents = false
-layout_mode = 0
-offset_left = 516.0
-offset_top = 284.0
-offset_right = 585.0
-offset_bottom = 357.0
-scale = Vector2(5.89226, 2.29036)
-bbcode_enabled = true
-text = "[TIMER HERE]"
-fit_content = true
-tab_size = 6
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 4.0
@@ -55,3 +33,14 @@ autostart = true
 
 [node name="PlayerHit" type="AudioStreamPlayer" parent="AudioListener2D"]
 stream = ExtResource("2_wk2yc")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 550.0
+offset_top = 272.0
+offset_right = 1148.0
+offset_bottom = 407.0
+theme = ExtResource("2_hrikp")
+bbcode_enabled = true
+text = "[TIMER HERE] "
+fit_content = true
