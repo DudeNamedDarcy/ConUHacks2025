@@ -20,13 +20,13 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	check_if_both_are_ready()
 	if (are_both_players_ready == true):
-		countdown_timer.start()
+		get_tree().change_scene_to_file("res://round.tscn")
 
-	if Input.is_action_just_pressed("player1UP"):
+	if Input.is_action_just_pressed("player1SHOOT"):
 		player_one_ready = true
 		p_1_ready_text.show()
 
-	if Input.is_action_just_pressed("player2UP"):
+	if Input.is_action_just_pressed("player2SHOOT"):
 		player_two_ready = true
 		p_2_ready_text.show()
 

@@ -1,20 +1,17 @@
-[gd_scene load_steps=7 format=3 uid="uid://ccwsy4sqqun1"]
+[gd_scene load_steps=4 format=3 uid="uid://ccwsy4sqqun1"]
 
 [ext_resource type="Script" path="res://scripts/game.gd" id="1_6f5yr"]
 [ext_resource type="PackedScene" uid="uid://bibkoy67pb64u" path="res://scenes/player1.tscn" id="1_7wsrx"]
 [ext_resource type="PackedScene" uid="uid://f2i42fmqfya5" path="res://scenes/player2.tscn" id="3_jhf1s"]
-[ext_resource type="PackedScene" uid="uid://pvdvch76a3da" path="res://scenes/projectile.tscn" id="4_7op5h"]
-[ext_resource type="PackedScene" uid="uid://dg0in2lqik1l0" path="res://scenes/projectile_turret_two.tscn" id="5_8cd50"]
-[ext_resource type="Script" path="res://scenes/projectile.gd" id="6_su6dv"]
 
 [node name="Round" type="Node2D"]
 script = ExtResource("1_6f5yr")
 
 [node name="player1" parent="." instance=ExtResource("1_7wsrx")]
-position = Vector2(198, 194)
+position = Vector2(300, 200)
 
 [node name="player2" parent="." instance=ExtResource("3_jhf1s")]
-position = Vector2(823, 404)
+position = Vector2(900, 500)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(578, 323)
@@ -34,6 +31,7 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 510.0
 grow_horizontal = 2
 grow_vertical = 2
 bbcode_enabled = true
@@ -41,12 +39,32 @@ bbcode_enabled = true
 [node name="PlayerTwoRoundsText" type="RichTextLabel" parent="UILayer/UI_Control"]
 layout_mode = 0
 offset_right = 1152.0
-offset_bottom = 40.0
+offset_bottom = 442.0
 
-[node name="projectilePlayer1Test" parent="." instance=ExtResource("4_7op5h")]
-position = Vector2(188, -51)
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = -5
 
-[node name="projectilePlayer2Test" parent="." instance=ExtResource("5_8cd50")]
-position = Vector2(258, -42)
-scale = Vector2(1, 1)
-script = ExtResource("6_su6dv")
+[node name="Control" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="RoundWaitTimer" type="Timer" parent="."]
+wait_time = 3.0
+one_shot = true
+
+[connection signal="SetUpRound" from="." to="player1" method="_on_round_set_up_round"]
+[connection signal="PlayerOneDead" from="player1" to="." method="_on_player_1_player_one_dead"]
+[connection signal="timeout" from="RoundWaitTimer" to="." method="_on_round_wait_timer_timeout"]
