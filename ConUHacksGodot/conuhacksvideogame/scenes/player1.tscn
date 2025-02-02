@@ -45,6 +45,7 @@ animations = [{
 size = Vector2(38, 40)
 
 [node name="player1" type="CharacterBody2D"]
+z_index = 5
 rotation = 1.5708
 script = ExtResource("1_66htc")
 

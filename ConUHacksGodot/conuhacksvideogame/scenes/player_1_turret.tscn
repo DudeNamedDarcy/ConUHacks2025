@@ -46,8 +46,9 @@ script = ExtResource("1_p1xoj")
 
 [node name="Sprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
-scale = Vector2(0.5, 0.5)
+scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_guhyy")
+autoplay = "default"
 
 [node name="BulletFireTimer" type="Timer" parent="."]
 wait_time = 0.5

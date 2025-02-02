@@ -82,17 +82,17 @@ script = ExtResource("4_ogfv2")
 
 [node name="Health_bar" type="ProgressBar" parent="Health1"]
 modulate = Color(0, 1, 0, 1)
-offset_left = 60.0
-offset_top = 101.0
-offset_right = 263.0
-offset_bottom = 128.0
+offset_left = 15.0
+offset_top = 607.0
+offset_right = 218.0
+offset_bottom = 634.0
 step = 1.0
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Health1"]
-offset_left = 80.0
-offset_top = 61.0
-offset_right = 229.0
-offset_bottom = 106.0
+offset_left = 47.0
+offset_top = 555.0
+offset_right = 196.0
+offset_bottom = 600.0
 theme = ExtResource("5_7d064")
 bbcode_enabled = true
 text = "[center]You Died!"
@@ -102,17 +102,17 @@ script = ExtResource("6_jglnt")
 
 [node name="Health_bar" type="ProgressBar" parent="Health2"]
 modulate = Color(0, 1, 0, 1)
-offset_left = 804.0
-offset_top = 419.0
-offset_right = 1007.0
-offset_bottom = 446.0
+offset_left = 931.0
+offset_top = 603.0
+offset_right = 1134.0
+offset_bottom = 630.0
 step = 1.0
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Health2"]
-offset_left = 808.0
-offset_top = 363.0
-offset_right = 957.0
-offset_bottom = 408.0
+offset_left = 958.0
+offset_top = 550.0
+offset_right = 1107.0
+offset_bottom = 595.0
 theme = ExtResource("5_7d064")
 bbcode_enabled = true
 text = "[center]You Died!"
