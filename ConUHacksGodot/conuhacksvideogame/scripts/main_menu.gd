@@ -2,10 +2,11 @@ extends Control
 
 var tips_array: Array[String] = [
 	"[center] Tip: Don't Die! [/center]", 
-	"[center] Tip: Press the Shoot Button to Shoot! [/center]",
+	"[center] Tip: Press the Place Turret Button to Place A Deady Turret! [/center]",
 	"[center] Tip: Pressing the Quit Button does not start the game... [/center]",
-	"[center] Tip: Every round is only 40 seconds long so get your opponent quickly! [/center]",
+	"[center] Tip: This Game basically devolved into a bullet hell. Have fun! [/center]",
 	"[center] Tip: Play Helldivers 2 instead of this game! [/center]",
+	"[center] Tip: Both YOUR turret and the enemy's turret can damage you! Watch out for all bullets! [/center]"
 	]
 @onready var tip_text: RichTextLabel = $TipText
 
