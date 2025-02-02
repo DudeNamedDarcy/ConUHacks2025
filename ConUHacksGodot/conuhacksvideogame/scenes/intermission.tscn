@@ -1,4 +1,4 @@
-[gd_scene load_steps=2 format=3 uid="uid://h5w8tmauepcq"]
+[gd_scene load_steps=2 format=3 uid="uid://sax6jjs26fgs"]
 
 [ext_resource type="Script" path="res://scenes/intermission.gd" id="1_24w8j"]
 
@@ -32,10 +32,13 @@ offset_right = 40.0
 offset_bottom = 23.0
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
-offset_left = 449.0
-offset_top = 143.0
-offset_right = 489.0
-offset_bottom = 183.0
+texture_filter = 1
+clip_contents = false
+layout_mode = 0
+offset_left = 516.0
+offset_top = 284.0
+offset_right = 585.0
+offset_bottom = 357.0
 scale = Vector2(5.89226, 2.29036)
 bbcode_enabled = true
 text = "[TIMER HERE]"

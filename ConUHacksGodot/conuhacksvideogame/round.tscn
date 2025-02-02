@@ -75,86 +75,6 @@ offset_right = 1154.0
 offset_bottom = 38.0
 text = "Player Two Rounds Won:"
 
-[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="UILayer/UI_Control"]
-z_index = -40
-texture_filter = 1
-position = Vector2(896.875, 235.1)
-scale = Vector2(3.3125, 3.39)
-sprite_frames = SubResource("SpriteFrames_l7q2c")
-autoplay = "default"
-
-[node name="AnimatedSprite2D3" type="AnimatedSprite2D" parent="UILayer/UI_Control"]
-z_index = -40
-texture_filter = 1
-position = Vector2(457.5, 475.5)
-scale = Vector2(2.35, 2.15)
-sprite_frames = SubResource("SpriteFrames_l7q2c")
-autoplay = "default"
-
-[node name="AnimatedSprite2D4" type="AnimatedSprite2D" parent="UILayer/UI_Control"]
-z_index = -40
-texture_filter = 1
-position = Vector2(621, 48.5)
-scale = Vector2(2.4, 3.05)
-sprite_frames = SubResource("SpriteFrames_l7q2c")
-autoplay = "default"
-
-[node name="AnimatedSprite2D5" type="AnimatedSprite2D" parent="UILayer/UI_Control"]
-z_index = -40
-texture_filter = 1
-position = Vector2(648, 289.5)
-scale = Vector2(2.2, 2.35)
-sprite_frames = SubResource("SpriteFrames_l7q2c")
-autoplay = "default"
-
-[node name="AnimatedSprite2D6" type="AnimatedSprite2D" parent="UILayer/UI_Control"]
-z_index = -40
-texture_filter = 1
-position = Vector2(40, 317.5)
-scale = Vector2(2.2, 2.55)
-sprite_frames = SubResource("SpriteFrames_l7q2c")
-autoplay = "default"
-
-[node name="AnimatedSprite2D7" type="AnimatedSprite2D" parent="UILayer/UI_Control"]
-z_index = -40
-texture_filter = 1
-position = Vector2(705, 570)
-scale = Vector2(3.1, 2.9)
-sprite_frames = SubResource("SpriteFrames_l7q2c")
-autoplay = "default"
-
-[node name="AnimatedSprite2D8" type="AnimatedSprite2D" parent="UILayer/UI_Control"]
-z_index = -40
-texture_filter = 1
-position = Vector2(1111, 401.5)
-scale = Vector2(2.9, 2.45)
-sprite_frames = SubResource("SpriteFrames_l7q2c")
-autoplay = "default"
-
-[node name="AnimatedSprite2D9" type="AnimatedSprite2D" parent="UILayer/UI_Control"]
-z_index = -40
-texture_filter = 1
-position = Vector2(141.5, 510.5)
-scale = Vector2(1.95, 2.15)
-sprite_frames = SubResource("SpriteFrames_l7q2c")
-autoplay = "default"
-
-[node name="AnimatedSprite2D10" type="AnimatedSprite2D" parent="UILayer/UI_Control"]
-z_index = -40
-texture_filter = 1
-position = Vector2(986.5, 68.5)
-scale = Vector2(2.35, 2.75)
-sprite_frames = SubResource("SpriteFrames_l7q2c")
-autoplay = "default"
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="UILayer/UI_Control"]
-z_index = -40
-texture_filter = 1
-position = Vector2(250.5, 78)
-scale = Vector2(2.75, 2.2)
-sprite_frames = SubResource("SpriteFrames_l7q2c")
-autoplay = "default"
-
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 layer = -5
 
@@ -177,7 +97,7 @@ offset_right = -1.0
 offset_bottom = -1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0, 0, 0, 1)
+color = Color(0.054902, 0, 0.14902, 1)
 
 [node name="RoundWaitTimer" type="Timer" parent="."]
 wait_time = 3.0
@@ -228,6 +148,94 @@ offset_bottom = 595.0
 theme = ExtResource("5_7d064")
 bbcode_enabled = true
 text = "[center]You Died!"
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="."]
+z_index = -40
+texture_filter = 1
+position = Vector2(896.875, 235.1)
+scale = Vector2(3.3125, 3.39)
+sprite_frames = SubResource("SpriteFrames_l7q2c")
+autoplay = "default"
+
+[node name="AnimatedSprite2D3" type="AnimatedSprite2D" parent="."]
+z_index = -40
+texture_filter = 1
+position = Vector2(457.5, 475.5)
+scale = Vector2(2.35, 2.15)
+sprite_frames = SubResource("SpriteFrames_l7q2c")
+autoplay = "default"
+
+[node name="AnimatedSprite2D4" type="AnimatedSprite2D" parent="."]
+z_index = -40
+texture_filter = 1
+position = Vector2(621, 48.5)
+scale = Vector2(2.4, 3.05)
+sprite_frames = SubResource("SpriteFrames_l7q2c")
+autoplay = "default"
+
+[node name="AnimatedSprite2D5" type="AnimatedSprite2D" parent="."]
+z_index = -40
+texture_filter = 1
+position = Vector2(726, 390)
+scale = Vector2(2.1, 1.7)
+sprite_frames = SubResource("SpriteFrames_l7q2c")
+autoplay = "default"
+
+[node name="AnimatedSprite2D6" type="AnimatedSprite2D" parent="."]
+z_index = -40
+texture_filter = 1
+position = Vector2(40, 317.5)
+scale = Vector2(2.2, 2.55)
+sprite_frames = SubResource("SpriteFrames_l7q2c")
+autoplay = "default"
+
+[node name="AnimatedSprite2D7" type="AnimatedSprite2D" parent="."]
+z_index = -40
+texture_filter = 1
+position = Vector2(705, 570)
+scale = Vector2(3.1, 2.9)
+sprite_frames = SubResource("SpriteFrames_l7q2c")
+autoplay = "default"
+
+[node name="AnimatedSprite2D8" type="AnimatedSprite2D" parent="."]
+z_index = -40
+texture_filter = 1
+position = Vector2(1111, 401.5)
+scale = Vector2(2.9, 2.45)
+sprite_frames = SubResource("SpriteFrames_l7q2c")
+autoplay = "default"
+
+[node name="AnimatedSprite2D9" type="AnimatedSprite2D" parent="."]
+z_index = -40
+texture_filter = 1
+position = Vector2(141.5, 510.5)
+scale = Vector2(1.95, 2.15)
+sprite_frames = SubResource("SpriteFrames_l7q2c")
+autoplay = "default"
+
+[node name="AnimatedSprite2D10" type="AnimatedSprite2D" parent="."]
+z_index = -40
+texture_filter = 1
+position = Vector2(986.5, 68.5)
+scale = Vector2(2.35, 2.75)
+sprite_frames = SubResource("SpriteFrames_l7q2c")
+autoplay = "default"
+
+[node name="AnimatedSprite2D11" type="AnimatedSprite2D" parent="."]
+z_index = -40
+texture_filter = 1
+position = Vector2(436, 275.5)
+scale = Vector2(2.3, 2.25)
+sprite_frames = SubResource("SpriteFrames_l7q2c")
+autoplay = "default"
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+z_index = -40
+texture_filter = 1
+position = Vector2(250.5, 78)
+scale = Vector2(2.75, 2.2)
+sprite_frames = SubResource("SpriteFrames_l7q2c")
+autoplay = "default"
 
 [connection signal="SetUpRound" from="." to="player1" method="_on_round_set_up_round"]
 [connection signal="SetUpRound" from="." to="player2" method="_on_round_set_up_round"]

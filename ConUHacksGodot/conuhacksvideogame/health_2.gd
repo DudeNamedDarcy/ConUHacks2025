@@ -25,17 +25,16 @@ func _process(_delta: float) -> void:
 		var b = 0.0
 		$Health_bar.modulate = Color(r, g, b)
 	
+	if $Health_bar.value <=5:
+		print("You died!")
+		$RichTextLabel.visible = true
+	
 	if $Health_bar.value <= 25:
 		var r = 255
 		var g = 0.0
 		var b = 0.0
 		$Health_bar.modulate = Color(r, b, g)
-	
-	if $Health_bar.value == 0:
-		print("You died!")
-		$RichTextLabel.visible = true
 		
-
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
