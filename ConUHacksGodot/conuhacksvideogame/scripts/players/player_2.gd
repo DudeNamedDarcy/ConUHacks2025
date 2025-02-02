@@ -9,7 +9,7 @@ var max_health = 100
 @onready var turret = preload("res://scenes/player_2_turret.tscn")
 @onready var main = get_tree().get_root().get_node(".") #gets the top node of the level as a variable
 @onready var placing_turret_timer: Timer = $"Placing Turret Timer"
-
+@export var explosion: PackedScene = preload("res://blood_hit_particles.tscn")
 
 var allowed_to_place = true
 
@@ -52,6 +52,9 @@ func place_turret():
 	main.add_child.call_deferred(turret_instance) # makes the turret a child of the level, not the child, so it doesn't move with the player
 
 func player_two_death():
+	var explosion_instance = explosion.instantiate()
+	explosion_instance.position = position
+	main.add_child.call_deferred(explosion_instance)
 	emit_signal("PlayerTwoDead")
 
 func _on_round_set_up_round() -> void:

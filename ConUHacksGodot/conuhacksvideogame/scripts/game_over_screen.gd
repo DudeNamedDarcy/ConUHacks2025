@@ -11,6 +11,8 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	declare_winner()
+	if Input.is_action_just_pressed("player1DOWN"):
+			Global.player_one_won = true
 
 func declare_winner():
 	if (Global.player_one_won == true):
@@ -21,12 +23,8 @@ func declare_winner():
 		who_won_text.text = "[center] [winner shown here] [/center]"
 
 func _on_play_again_button_pressed() -> void:
-	Global.player_one_won = false
-	Global.player_two_won = false
 	get_tree().change_scene_to_file("res://scenes/intermission.tscn")
 
 func _on_quit_pressed() -> void:
-	Global.player_one_won = false
-	Global.player_two_won = false
 	get_tree().quit()
 	

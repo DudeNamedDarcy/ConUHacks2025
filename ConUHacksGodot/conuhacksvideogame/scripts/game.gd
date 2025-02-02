@@ -22,6 +22,7 @@ extends Node2D
 
 @onready var HP: Node2D = $Health1
 
+
 signal SetUpRound
 
 # Called when the node enters the scene tree for the first time.
@@ -42,8 +43,8 @@ func _process(delta: float) -> void:
 	HP._process(0.0)
 
 func set_up_for_round():
-	player_1.position = Vector2(300, 200)
-	player_2.position = Vector2(900, 500)
+	player_1.position = Vector2(randf_range(200,400), randf_range(100,500))
+	player_2.position = Vector2(randf_range(700,900), randf_range(100,500))
 	emit_signal("SetUpRound")
 
 func player_one_round_won():
