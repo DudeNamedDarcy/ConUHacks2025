@@ -62,6 +62,7 @@ autostart = true
 
 [node name="SingleGunshot" type="AudioStreamPlayer" parent="AudioListener2D"]
 stream = ExtResource("3_pxh0b")
+volume_db = -10.0
 
 [connection signal="timeout" from="BulletFireTimer" to="." method="_on_bullet_fire_timer_timeout"]
 [connection signal="timeout" from="DeathTimer" to="." method="_on_death_timer_timeout"]

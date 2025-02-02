@@ -22,6 +22,8 @@ extends Node2D
 
 @onready var HP: Node2D = $Health1
 
+var BG = preload("res://Sounds/Ambient.mp3")
+
 signal SetUpRound
 
 # Called when the node enters the scene tree for the first time.
@@ -31,11 +33,15 @@ func _ready() -> void:
 	player_two_rounds_text.text = "Player 2 Rounds Won: 0" ######################
 	player_one_score_text.text = "Score: 0" ######################
 	player_two_score_text.text = "Score: 0" ######################
+	
+	$AudioStreamPlayer2D.stream = BG
+	$AudioStreamPlayer2D.play()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	HP._ready()
 	HP._process(0.0)
+	
 
 func set_up_for_round():
 	player_1.position = Vector2(300, 200)
