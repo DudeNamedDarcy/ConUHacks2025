@@ -1,8 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://dh5xqfpx2iuxo"]
+[gd_scene load_steps=7 format=3 uid="uid://ccwsy4sqqun1"]
 
 [ext_resource type="Script" path="res://scripts/game.gd" id="1_6f5yr"]
 [ext_resource type="PackedScene" uid="uid://bibkoy67pb64u" path="res://scenes/player1.tscn" id="1_7wsrx"]
-[ext_resource type="PackedScene" uid="uid://c1rn7agd67vif" path="res://scenes/player2.tscn" id="3_jhf1s"]
+[ext_resource type="PackedScene" uid="uid://f2i42fmqfya5" path="res://scenes/player2.tscn" id="3_jhf1s"]
 [ext_resource type="Script" path="res://health_1.gd" id="4_ogfv2"]
 [ext_resource type="Theme" uid="uid://j8m37612a0eo" path="res://SubTitleTheme.tres" id="5_7d064"]
 [ext_resource type="Script" path="res://health_2.gd" id="6_jglnt"]
@@ -102,10 +102,10 @@ script = ExtResource("6_jglnt")
 
 [node name="Health_bar" type="ProgressBar" parent="Health2"]
 modulate = Color(0, 1, 0, 1)
-offset_left = 790.0
-offset_top = 423.0
-offset_right = 993.0
-offset_bottom = 450.0
+offset_left = 804.0
+offset_top = 419.0
+offset_right = 1007.0
+offset_bottom = 446.0
 step = 1.0
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Health2"]

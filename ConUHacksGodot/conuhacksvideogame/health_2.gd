@@ -15,13 +15,19 @@ func update_health_bar(given_health):
 func _process(_delta: float) -> void:
 	health_bar.value = Global.player_two_health
 	
+	if $Health_bar.value > 25:
+		var g = 255
+		var r = 0.0
+		var b = 0.0
+		$Health_bar.modulate = Color(r, g, b)
+	
 	if $Health_bar.value <= 25:
-		var r = abs(health * 0.01 - 1.0)
-		var g = health * 0.01
+		var r = 255
+		var g = 0.0
 		var b = 0.0
 		$Health_bar.modulate = Color(r, b, g)
 	
-	if health == 0:
+	if $Health_bar.value == 0:
 		print("You died!")
 		$RichTextLabel.visible = true
 		
