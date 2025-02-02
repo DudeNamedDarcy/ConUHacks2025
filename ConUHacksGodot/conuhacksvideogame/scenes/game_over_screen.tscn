@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://bvqk2bb0fcddk"]
+[gd_scene load_steps=12 format=3 uid="uid://bvqk2bb0fcddk"]
 
 [ext_resource type="Script" path="res://scripts/game_over_screen.gd" id="1_tga0r"]
 [ext_resource type="Script" path="res://scenes/play_again_button.gd" id="2_di51b"]
 [ext_resource type="Theme" uid="uid://dfjvbpbn8v7j0" path="res://TitleTheme.tres" id="2_n5vbn"]
 [ext_resource type="Theme" uid="uid://j8m37612a0eo" path="res://SubTitleTheme.tres" id="3_dxyuy"]
 [ext_resource type="Script" path="res://scenes/quit.gd" id="3_w2xpi"]
+[ext_resource type="Texture2D" uid="uid://dhlpos5xfhhg5" path="res://Sprites/Star.png" id="6_r0orv"]
 
 [sub_resource type="FontFile" id="FontFile_lptv0"]
 cache/0/16/0/ascent = 0.0
@@ -21,6 +22,28 @@ cache/0/100/0/scale = 1.0
 [sub_resource type="LabelSettings" id="LabelSettings_4fqjk"]
 font = SubResource("FontFile_lptv0")
 font_size = 100
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xvjxn"]
+atlas = ExtResource("6_r0orv")
+region = Rect2(0, 0, 20, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k61jy"]
+atlas = ExtResource("6_r0orv")
+region = Rect2(0, 20, 20, 20)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3sv8o"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xvjxn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k61jy")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="Game Over Screen" type="Control"]
 layout_mode = 3
@@ -88,6 +111,18 @@ z_index = 1
 layout_mode = 2
 text = "Quit"
 script = ExtResource("3_w2xpi")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(-1285, 498)
+scale = Vector2(8, 8)
+sprite_frames = SubResource("SpriteFrames_3sv8o")
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(-726.5, 556.5)
+scale = Vector2(2.75, 2.15)
+sprite_frames = SubResource("SpriteFrames_3sv8o")
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/play_again_button" to="." method="_on_play_again_button_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/quit" to="." method="_on_quit_pressed"]
