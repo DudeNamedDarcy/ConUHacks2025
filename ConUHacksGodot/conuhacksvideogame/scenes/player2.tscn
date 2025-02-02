@@ -48,6 +48,7 @@ radius = 12.0
 script = ExtResource("1_wb36v")
 
 [node name="Sprite2D" type="AnimatedSprite2D" parent="."]
+z_index = 100
 texture_filter = 1
 position = Vector2(1.90735e-06, 0)
 rotation = 1.5708

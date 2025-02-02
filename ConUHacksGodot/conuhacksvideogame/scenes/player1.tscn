@@ -50,6 +50,7 @@ rotation = 1.5708
 script = ExtResource("1_66htc")
 
 [node name="Sprite2D" type="AnimatedSprite2D" parent="."]
+z_index = 100
 texture_filter = 1
 position = Vector2(-3.64673e-09, 0.0834274)
 rotation = 1.5708

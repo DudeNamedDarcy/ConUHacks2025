@@ -1,19 +1,45 @@
-[gd_scene load_steps=7 format=3 uid="uid://ccwsy4sqqun1"]
+[gd_scene load_steps=12 format=3 uid="uid://ccwsy4sqqun1"]
 
 [ext_resource type="Script" path="res://scripts/game.gd" id="1_6f5yr"]
 [ext_resource type="PackedScene" uid="uid://bibkoy67pb64u" path="res://scenes/player1.tscn" id="1_7wsrx"]
 [ext_resource type="PackedScene" uid="uid://f2i42fmqfya5" path="res://scenes/player2.tscn" id="3_jhf1s"]
+[ext_resource type="Texture2D" uid="uid://dhlpos5xfhhg5" path="res://Sprites/Star.png" id="4_6406m"]
 [ext_resource type="Script" path="res://health_1.gd" id="4_ogfv2"]
 [ext_resource type="Theme" uid="uid://j8m37612a0eo" path="res://SubTitleTheme.tres" id="5_7d064"]
+[ext_resource type="AudioStream" uid="uid://x8eop2bn82x" path="res://Sounds/Player_hit.mp3" id="6_iov11"]
 [ext_resource type="Script" path="res://health_2.gd" id="6_jglnt"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i73ug"]
+atlas = ExtResource("4_6406m")
+region = Rect2(0, 0, 20, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jd7if"]
+atlas = ExtResource("4_6406m")
+region = Rect2(0, 20, 20, 20)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_l7q2c"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i73ug")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jd7if")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="Round" type="Node2D"]
 script = ExtResource("1_6f5yr")
 
 [node name="player1" parent="." instance=ExtResource("1_7wsrx")]
+z_index = 100
 position = Vector2(300, 200)
 
 [node name="player2" parent="." instance=ExtResource("3_jhf1s")]
+z_index = 100
 position = Vector2(900, 500)
 
 [node name="Camera2D" type="Camera2D" parent="."]
@@ -48,6 +74,86 @@ offset_left = 510.0
 offset_right = 1154.0
 offset_bottom = 38.0
 text = "Player Two Rounds Won:"
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="UILayer/UI_Control"]
+z_index = -40
+texture_filter = 1
+position = Vector2(896.875, 235.1)
+scale = Vector2(3.3125, 3.39)
+sprite_frames = SubResource("SpriteFrames_l7q2c")
+autoplay = "default"
+
+[node name="AnimatedSprite2D3" type="AnimatedSprite2D" parent="UILayer/UI_Control"]
+z_index = -40
+texture_filter = 1
+position = Vector2(457.5, 475.5)
+scale = Vector2(2.35, 2.15)
+sprite_frames = SubResource("SpriteFrames_l7q2c")
+autoplay = "default"
+
+[node name="AnimatedSprite2D4" type="AnimatedSprite2D" parent="UILayer/UI_Control"]
+z_index = -40
+texture_filter = 1
+position = Vector2(621, 48.5)
+scale = Vector2(2.4, 3.05)
+sprite_frames = SubResource("SpriteFrames_l7q2c")
+autoplay = "default"
+
+[node name="AnimatedSprite2D5" type="AnimatedSprite2D" parent="UILayer/UI_Control"]
+z_index = -40
+texture_filter = 1
+position = Vector2(648, 289.5)
+scale = Vector2(2.2, 2.35)
+sprite_frames = SubResource("SpriteFrames_l7q2c")
+autoplay = "default"
+
+[node name="AnimatedSprite2D6" type="AnimatedSprite2D" parent="UILayer/UI_Control"]
+z_index = -40
+texture_filter = 1
+position = Vector2(40, 317.5)
+scale = Vector2(2.2, 2.55)
+sprite_frames = SubResource("SpriteFrames_l7q2c")
+autoplay = "default"
+
+[node name="AnimatedSprite2D7" type="AnimatedSprite2D" parent="UILayer/UI_Control"]
+z_index = -40
+texture_filter = 1
+position = Vector2(705, 570)
+scale = Vector2(3.1, 2.9)
+sprite_frames = SubResource("SpriteFrames_l7q2c")
+autoplay = "default"
+
+[node name="AnimatedSprite2D8" type="AnimatedSprite2D" parent="UILayer/UI_Control"]
+z_index = -40
+texture_filter = 1
+position = Vector2(1111, 401.5)
+scale = Vector2(2.9, 2.45)
+sprite_frames = SubResource("SpriteFrames_l7q2c")
+autoplay = "default"
+
+[node name="AnimatedSprite2D9" type="AnimatedSprite2D" parent="UILayer/UI_Control"]
+z_index = -40
+texture_filter = 1
+position = Vector2(141.5, 510.5)
+scale = Vector2(1.95, 2.15)
+sprite_frames = SubResource("SpriteFrames_l7q2c")
+autoplay = "default"
+
+[node name="AnimatedSprite2D10" type="AnimatedSprite2D" parent="UILayer/UI_Control"]
+z_index = -40
+texture_filter = 1
+position = Vector2(986.5, 68.5)
+scale = Vector2(2.35, 2.75)
+sprite_frames = SubResource("SpriteFrames_l7q2c")
+autoplay = "default"
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="UILayer/UI_Control"]
+z_index = -40
+texture_filter = 1
+position = Vector2(250.5, 78)
+scale = Vector2(2.75, 2.2)
+sprite_frames = SubResource("SpriteFrames_l7q2c")
+autoplay = "default"
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 layer = -5
@@ -96,6 +202,12 @@ offset_bottom = 600.0
 theme = ExtResource("5_7d064")
 bbcode_enabled = true
 text = "[center]You Died!"
+
+[node name="AudioListener2D" type="AudioListener2D" parent="Health1"]
+
+[node name="PlayerHit" type="AudioStreamPlayer" parent="Health1/AudioListener2D"]
+stream = ExtResource("6_iov11")
+volume_db = 5.333
 
 [node name="Health2" type="Node2D" parent="."]
 script = ExtResource("6_jglnt")

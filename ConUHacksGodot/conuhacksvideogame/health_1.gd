@@ -13,7 +13,11 @@ func update_health_bar(given_health):
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
+	var temp = health_bar.value
 	health_bar.value = Global.player_one_health
+	
+	if temp < health_bar.value:
+		$AudioListener2D/PlayerHit.play()
 	
 	if $Health_bar.value > 25:
 		var g = 255
