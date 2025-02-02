@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://bvqk2bb0fcddk"]
+[gd_scene load_steps=8 format=3 uid="uid://bvqk2bb0fcddk"]
 
 [ext_resource type="Script" path="res://scripts/game_over_screen.gd" id="1_tga0r"]
 [ext_resource type="Script" path="res://scenes/play_again_button.gd" id="2_di51b"]
 [ext_resource type="Theme" uid="uid://dfjvbpbn8v7j0" path="res://TitleTheme.tres" id="2_n5vbn"]
+[ext_resource type="Theme" uid="uid://j8m37612a0eo" path="res://SubTitleTheme.tres" id="3_dxyuy"]
 [ext_resource type="Script" path="res://scenes/quit.gd" id="3_w2xpi"]
 
 [sub_resource type="FontFile" id="FontFile_lptv0"]
@@ -42,7 +43,7 @@ offset_right = -231.0
 offset_bottom = 1038.0
 color = Color(0, 0, 0, 1)
 
-[node name="Label" type="Label" parent="."]
+[node name="Game Over Title" type="Label" parent="."]
 layout_mode = 0
 offset_left = -1247.0
 offset_top = 661.0
@@ -51,6 +52,16 @@ offset_bottom = 795.0
 theme = ExtResource("2_n5vbn")
 text = "GAME OVER!"
 label_settings = SubResource("LabelSettings_4fqjk")
+
+[node name="Who Won Text" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = -1241.0
+offset_top = 806.0
+offset_right = -677.0
+offset_bottom = 1026.0
+theme = ExtResource("3_dxyuy")
+bbcode_enabled = true
+text = "[center] [winner shown here] [/center]"
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 z_index = 1

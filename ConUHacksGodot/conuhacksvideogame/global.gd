@@ -15,6 +15,12 @@ var winner_player = ""
 var player_one_health = 100
 var player_two_health = 100
 
+var player_one_won = false
+var player_two_won = true
+
+var in_startup = false
+
+
 # var p1_health = 0
 
 # Called when the node enters the scene tree for the first time.

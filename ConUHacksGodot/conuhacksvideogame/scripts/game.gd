@@ -28,6 +28,7 @@ signal SetUpRound
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	Global.in_startup = false
 	set_up_for_round()
 	player_one_rounds_text.text = "Player 1 Rounds Won: 0" ######################
 	player_two_rounds_text.text = "Player 2 Rounds Won: 0" ######################

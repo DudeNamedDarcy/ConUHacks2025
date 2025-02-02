@@ -14,6 +14,7 @@ var are_both_players_ready = false
 func _ready() -> void:
 	p_1_ready_text.hide()
 	p_2_ready_text.hide()
+	Global.in_startup = true
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
