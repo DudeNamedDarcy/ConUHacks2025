@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://e3l20wivrdhj"]
+[gd_scene load_steps=4 format=3 uid="uid://sax6jjs26fgs"]
 
 [ext_resource type="Script" path="res://scenes/intermission.gd" id="1_24w8j"]
 [ext_resource type="Theme" uid="uid://dfjvbpbn8v7j0" path="res://TitleTheme.tres" id="2_hrikp"]

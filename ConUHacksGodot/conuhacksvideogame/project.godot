@@ -21,7 +21,6 @@ config/icon="res://icon.svg"
 Global="*res://global.gd"
 Player2="*res://scripts/players/player_2.gd"
 Projectile="*res://scenes/projectile.gd"
-Bg="*res://Sounds/BG.tscn"
 
 [display]
 
