@@ -7,7 +7,7 @@ extends CharacterBody2D
 var this_player_one_health = 100
 var max_health = 100
 
-@onready var health_bar: Node2D = $HealthBar
+#@onready var health_bar: Node2D = $HealthBar
 @onready var turret = preload("res://scenes/player_1_turret.tscn")
 @onready var main = get_tree().get_root().get_node(".") #gets the top node of the level as a variable
 @onready var turret_place_timer: Timer = $"Turret Place Timer"
@@ -61,8 +61,6 @@ func _on_round_set_up_round() -> void:
 
 func _on_turret_place_timer_timeout() -> void:
 	allowed_to_place = true
-
-
 
 
 

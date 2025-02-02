@@ -1,10 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://bvqk2bb0fcddk"]
+[gd_scene load_steps=7 format=3 uid="uid://bvqk2bb0fcddk"]
 
 [ext_resource type="Script" path="res://scripts/game_over_screen.gd" id="1_tga0r"]
 [ext_resource type="Script" path="res://scenes/play_again_button.gd" id="2_di51b"]
 [ext_resource type="Theme" uid="uid://dfjvbpbn8v7j0" path="res://TitleTheme.tres" id="2_n5vbn"]
 [ext_resource type="Script" path="res://scenes/quit.gd" id="3_w2xpi"]
-[ext_resource type="Script" path="res://scenes/label_2.gd" id="4_k8luj"]
 
 [sub_resource type="FontFile" id="FontFile_lptv0"]
 cache/0/16/0/ascent = 0.0
@@ -78,12 +77,6 @@ z_index = 1
 layout_mode = 2
 text = "Quit"
 script = ExtResource("3_w2xpi")
-
-[node name="Label2" type="Label" parent="."]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 23.0
-script = ExtResource("4_k8luj")
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/play_again_button" to="." method="_on_play_again_button_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/quit" to="." method="_on_quit_pressed"]

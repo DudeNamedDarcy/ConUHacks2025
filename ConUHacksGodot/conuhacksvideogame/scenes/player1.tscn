@@ -52,6 +52,7 @@ script = ExtResource("1_66htc")
 [node name="Sprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 position = Vector2(-3.64673e-09, 0.0834274)
+rotation = 1.5708
 scale = Vector2(2, 2.008)
 sprite_frames = SubResource("SpriteFrames_63g2c")
 autoplay = "default"
@@ -66,6 +67,7 @@ position = Vector2(-0.999996, 5.52732e-06)
 shape = SubResource("RectangleShape2D_2f4xg")
 
 [node name="HealthBar" parent="." instance=ExtResource("3_w4yqy")]
+visible = false
 position = Vector2(-40, 0)
 rotation = -1.5708
 

@@ -1,8 +1,11 @@
-[gd_scene load_steps=4 format=3 uid="uid://ccwsy4sqqun1"]
+[gd_scene load_steps=7 format=3 uid="uid://ccwsy4sqqun1"]
 
 [ext_resource type="Script" path="res://scripts/game.gd" id="1_6f5yr"]
 [ext_resource type="PackedScene" uid="uid://bibkoy67pb64u" path="res://scenes/player1.tscn" id="1_7wsrx"]
 [ext_resource type="PackedScene" uid="uid://f2i42fmqfya5" path="res://scenes/player2.tscn" id="3_jhf1s"]
+[ext_resource type="Script" path="res://health_1.gd" id="4_ogfv2"]
+[ext_resource type="Theme" uid="uid://j8m37612a0eo" path="res://SubTitleTheme.tres" id="5_7d064"]
+[ext_resource type="Script" path="res://health_2.gd" id="6_jglnt"]
 
 [node name="Round" type="Node2D"]
 script = ExtResource("1_6f5yr")
@@ -62,6 +65,10 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = -1.0
+offset_top = -1.0
+offset_right = -1.0
+offset_bottom = -1.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 1)
@@ -70,8 +77,47 @@ color = Color(0, 0, 0, 1)
 wait_time = 3.0
 one_shot = true
 
+[node name="Health1" type="Node2D" parent="."]
+script = ExtResource("4_ogfv2")
+
+[node name="Health_bar" type="ProgressBar" parent="Health1"]
+modulate = Color(0, 1, 0, 1)
+offset_left = 60.0
+offset_top = 101.0
+offset_right = 263.0
+offset_bottom = 128.0
+step = 1.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Health1"]
+offset_left = 80.0
+offset_top = 61.0
+offset_right = 229.0
+offset_bottom = 106.0
+theme = ExtResource("5_7d064")
+bbcode_enabled = true
+text = "[center]You Died!"
+
+[node name="Health2" type="Node2D" parent="."]
+script = ExtResource("6_jglnt")
+
+[node name="Health_bar" type="ProgressBar" parent="Health2"]
+modulate = Color(0, 1, 0, 1)
+offset_left = 790.0
+offset_top = 423.0
+offset_right = 993.0
+offset_bottom = 450.0
+step = 1.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Health2"]
+offset_left = 808.0
+offset_top = 363.0
+offset_right = 957.0
+offset_bottom = 408.0
+theme = ExtResource("5_7d064")
+bbcode_enabled = true
+text = "[center]You Died!"
+
 [connection signal="SetUpRound" from="." to="player1" method="_on_round_set_up_round"]
 [connection signal="SetUpRound" from="." to="player2" method="_on_round_set_up_round"]
 [connection signal="PlayerOneDead" from="player1" to="." method="_on_player_1_player_one_dead"]
-[connection signal="PlayerTwoDead" from="player2" to="." method="_on_player_2_player_two_dead"]
 [connection signal="timeout" from="RoundWaitTimer" to="." method="_on_round_wait_timer_timeout"]

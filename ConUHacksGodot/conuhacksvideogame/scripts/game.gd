@@ -15,6 +15,8 @@ extends Node2D
 
 @onready var round_wait_timer: Timer = $RoundWaitTimer
 
+@onready var HP: Node2D = $Health1
+
 signal SetUpRound
 
 # Called when the node enters the scene tree for the first time.
@@ -26,7 +28,8 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	pass
+	HP._ready()
+	HP._process(0.0)
 
 func set_up_for_round():
 	player_1.position = Vector2(300, 200)

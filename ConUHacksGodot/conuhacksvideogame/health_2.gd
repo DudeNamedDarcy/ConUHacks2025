@@ -1,5 +1,4 @@
 extends Node2D
-#Added to CharacterBody2D
 
 @export var max_health = 100
 var health = 100
@@ -11,15 +10,12 @@ var health = 100
 func update_health_bar(given_health):
 	$Health_bar.value = given_health
 	
-func take_damage(damage):
-	health -= damage
-	update_health_bar(health)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
-	HP_perc = $Health_bar
+	health_bar.value = Global.player_two_health
 	
-	if health <= 25:
+	if $Health_bar.value <= 25:
 		var r = abs(health * 0.01 - 1.0)
 		var g = health * 0.01
 		var b = 0.0
@@ -29,9 +25,6 @@ func _process(_delta: float) -> void:
 		print("You died!")
 		$RichTextLabel.visible = true
 		
-		
-	#if Input.get_action_strength("Damage"):
-		#take_damage(1)
 
 
 # Called when the node enters the scene tree for the first time.
