@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://sax6jjs26fgs"]
+[gd_scene load_steps=3 format=3 uid="uid://sax6jjs26fgs"]
 
 [ext_resource type="Script" path="res://scenes/intermission.gd" id="1_24w8j"]
+[ext_resource type="AudioStream" uid="uid://x8eop2bn82x" path="res://Sounds/Player_hit.mp3" id="2_wk2yc"]
 
 [node name="intermission" type="Control"]
 z_index = 2
@@ -49,3 +50,8 @@ tab_size = 6
 wait_time = 4.0
 one_shot = true
 autostart = true
+
+[node name="AudioListener2D" type="AudioListener2D" parent="."]
+
+[node name="PlayerHit" type="AudioStreamPlayer" parent="AudioListener2D"]
+stream = ExtResource("2_wk2yc")
