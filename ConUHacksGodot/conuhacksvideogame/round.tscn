@@ -125,10 +125,10 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -1.0
-offset_top = -1.0
-offset_right = -1.0
-offset_bottom = -1.0
+offset_left = -8.0
+offset_top = -10.0
+offset_right = 15.0
+offset_bottom = 33.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.054902, 0, 0.14902, 1)
@@ -186,21 +186,21 @@ text = "[center]You Died!"
 [node name="Collisions" type="StaticBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Collisions"]
-position = Vector2(-3, 322)
+position = Vector2(-20, 322)
 shape = SubResource("RectangleShape2D_4h1h6")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Collisions"]
-position = Vector2(1147, 323)
+position = Vector2(1177, 323)
 shape = SubResource("RectangleShape2D_4h1h6")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Collisions"]
-position = Vector2(580.912, -5.58372)
+position = Vector2(580.912, -22.5837)
 rotation = 1.57557
 scale = Vector2(0.750825, 0.999779)
 shape = SubResource("RectangleShape2D_4h1h6")
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="Collisions"]
-position = Vector2(578, 648)
+position = Vector2(578, 666)
 rotation = 1.57557
 scale = Vector2(0.750825, 0.999779)
 shape = SubResource("RectangleShape2D_4h1h6")
