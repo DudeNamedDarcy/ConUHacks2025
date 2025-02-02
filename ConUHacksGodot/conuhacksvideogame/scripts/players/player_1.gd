@@ -31,7 +31,7 @@ func _physics_process(delta):
 	move_and_slide()
 	
 	if Input.is_action_just_pressed("player1SHOOT"):
-		if allowed_to_place:
+		if allowed_to_place == true :
 			place_turret()
 		else:
 			pass
