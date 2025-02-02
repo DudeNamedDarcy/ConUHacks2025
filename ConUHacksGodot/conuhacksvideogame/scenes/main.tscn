@@ -1,4 +1,8 @@
-extends Node
+[gd_scene load_steps=2 format=3 uid="uid://bosw3a5cbgu6c"]
+
+[sub_resource type="GDScript" id="GDScript_xlugy"]
+script/source = "# IGNORE THISSSSSSSS DO NOT MODIFY THIS ONE
+extends Node2D
 
 const NUMBER_OF_ROUNDS = 5
 # const BIGGEST_POSSIBLE_SCORE = 5 * 200
@@ -10,10 +14,7 @@ var p2_score = 0
 var player1_win = false
 var player2_win = false
 
-var winner_player = ""
-
-var player_one_health = 100
-var player_two_health = 100
+var winner_player = \"\"
 
 # var p1_health = 0
 
@@ -37,12 +38,16 @@ func _get_p2_score():
 func _process(delta: float) -> void:
 	if(round_count == NUMBER_OF_ROUNDS):
 		if(p1_score > p2_score):
-			winner_player = "Player 1"
+			winner_player = \"Player 1\"
 		else:
-			winner_player = "Player 2"
+			winner_player = \"Player 2\"
 		
 func _addtoScore1():
 	p1_score += 200
 	
 func _addtoScore2():
 	p2_score += 200
+"
+
+[node name="Main" type="Node2D"]
+script = SubResource("GDScript_xlugy")
