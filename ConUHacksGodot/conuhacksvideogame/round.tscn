@@ -31,15 +31,20 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 510.0
+offset_left = 2.0
+offset_right = -654.0
+offset_bottom = -617.0
 grow_horizontal = 2
 grow_vertical = 2
 bbcode_enabled = true
+text = "Player One Rounds Won:"
 
 [node name="PlayerTwoRoundsText" type="RichTextLabel" parent="UILayer/UI_Control"]
 layout_mode = 0
-offset_right = 1152.0
-offset_bottom = 442.0
+offset_left = 510.0
+offset_right = 1154.0
+offset_bottom = 38.0
+text = "Player Two Rounds Won:"
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 layer = -5
@@ -66,5 +71,6 @@ wait_time = 3.0
 one_shot = true
 
 [connection signal="SetUpRound" from="." to="player1" method="_on_round_set_up_round"]
+[connection signal="SetUpRound" from="." to="player2" method="_on_round_set_up_round"]
 [connection signal="PlayerOneDead" from="player1" to="." method="_on_player_1_player_one_dead"]
 [connection signal="timeout" from="RoundWaitTimer" to="." method="_on_round_wait_timer_timeout"]

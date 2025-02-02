@@ -62,3 +62,8 @@ shape = SubResource("CircleShape2D_0gij7")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("CircleShape2D_n8o46")
+
+[node name="Turret Place Player Two Timer" type="Timer" parent="."]
+wait_time = 0.6
+
+[connection signal="timeout" from="Turret Place Player Two Timer" to="." method="_on_turret_place_timer_timeout"]

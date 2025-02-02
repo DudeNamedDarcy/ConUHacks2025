@@ -10,6 +10,9 @@ var max_health = 100
 @onready var health_bar: Node2D = $HealthBar
 @onready var turret = preload("res://scenes/player_1_turret.tscn")
 @onready var main = get_tree().get_root().get_node(".") #gets the top node of the level as a variable
+@onready var turret_place_timer: Timer = $"Turret Place Timer"
+
+var allowed_to_place = true
 
 signal PlayerOneDead
 
@@ -29,11 +32,18 @@ func _physics_process(delta):
 	move_and_slide()
 	
 	if Input.is_action_just_pressed("player1SHOOT"):
-		place_turret()
+		if allowed_to_place:
+			place_turret()
+		else:
+			pass
+
+
 	if (this_player_one_health < 10):
 		player_one_death()
 
 func place_turret():
+	allowed_to_place = false
+	turret_place_timer.start()
 	var turret_instance = turret.instantiate() #creates a clone of the turret
 	turret_instance.position = position #makes the position of the turret the same as the player
 	main.add_child.call_deferred(turret_instance) # makes the turret a child of the level, not the child, so it doesn't move with the player
@@ -49,6 +59,8 @@ func _on_round_set_up_round() -> void:
 	Global.player_one_health = 100
 
 
+func _on_turret_place_timer_timeout() -> void:
+	allowed_to_place = true
 
 
 
