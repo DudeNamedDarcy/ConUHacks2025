@@ -5,8 +5,6 @@ var health = 100
 @onready var HP_perc = $Health_bar
 @onready var health_bar: ProgressBar = $Health_bar
 
-
-
 func update_health_bar(given_health):
 	$Health_bar.value = given_health
 	

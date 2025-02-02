@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://ccwsy4sqqun1"]
+[gd_scene load_steps=13 format=3 uid="uid://ccwsy4sqqun1"]
 
 [ext_resource type="Script" path="res://scripts/game.gd" id="1_6f5yr"]
 [ext_resource type="PackedScene" uid="uid://bibkoy67pb64u" path="res://scenes/player1.tscn" id="1_7wsrx"]
@@ -8,6 +8,8 @@
 [ext_resource type="Theme" uid="uid://j8m37612a0eo" path="res://SubTitleTheme.tres" id="5_7d064"]
 [ext_resource type="AudioStream" uid="uid://x8eop2bn82x" path="res://Sounds/Player_hit.mp3" id="6_iov11"]
 [ext_resource type="Script" path="res://health_2.gd" id="6_jglnt"]
+
+[sub_resource type="Theme" id="Theme_umng0"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_i73ug"]
 atlas = ExtResource("4_6406m")
@@ -73,7 +75,27 @@ layout_mode = 0
 offset_left = 510.0
 offset_right = 1154.0
 offset_bottom = 38.0
+scale = Vector2(0.971094, 1.29197)
 text = "Player Two Rounds Won:"
+
+[node name="PlayerOneScoreText" type="RichTextLabel" parent="UILayer/UI_Control"]
+layout_mode = 0
+offset_left = 33.0
+offset_top = 49.0
+offset_right = 73.0
+offset_bottom = 89.0
+scale = Vector2(1.67321, 1.59561)
+text = "Score P1"
+
+[node name="PlayerTwoScoreText" type="RichTextLabel" parent="UILayer/UI_Control"]
+layout_mode = 0
+offset_left = 523.0
+offset_top = 49.0
+offset_right = 563.0
+offset_bottom = 89.0
+scale = Vector2(1.5602, 1.48062)
+theme = SubResource("Theme_umng0")
+text = "Score"
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 layer = -5
@@ -85,6 +107,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(0.997056, 1)
 
 [node name="ColorRect" type="ColorRect" parent="CanvasLayer/Control"]
 layout_mode = 1
@@ -185,7 +208,7 @@ autoplay = "default"
 z_index = -40
 texture_filter = 1
 position = Vector2(40, 317.5)
-scale = Vector2(2.2, 2.55)
+scale = Vector2(2.20538, 2.28656)
 sprite_frames = SubResource("SpriteFrames_l7q2c")
 autoplay = "default"
 
@@ -208,7 +231,7 @@ autoplay = "default"
 [node name="AnimatedSprite2D9" type="AnimatedSprite2D" parent="."]
 z_index = -40
 texture_filter = 1
-position = Vector2(141.5, 510.5)
+position = Vector2(143, 521)
 scale = Vector2(1.95, 2.15)
 sprite_frames = SubResource("SpriteFrames_l7q2c")
 autoplay = "default"

@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://des1ryt20rbkd"]
+[gd_scene load_steps=5 format=3 uid="uid://dg0in2lqik1l0"]
 
 [ext_resource type="Script" path="res://scenes/projectile_for_turret_two.gd" id="1_m00t1"]
 [ext_resource type="Texture2D" uid="uid://ck408p6m62v7x" path="res://Sprites/Bullet.png" id="2_o7ffp"]

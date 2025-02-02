@@ -44,10 +44,10 @@ color = Color(0, 0, 0, 1)
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 0
-offset_left = -1238.0
-offset_top = 557.0
-offset_right = -663.0
-offset_bottom = 691.0
+offset_left = -1247.0
+offset_top = 661.0
+offset_right = -672.0
+offset_bottom = 795.0
 theme = ExtResource("2_n5vbn")
 text = "GAME OVER!"
 label_settings = SubResource("LabelSettings_4fqjk")
