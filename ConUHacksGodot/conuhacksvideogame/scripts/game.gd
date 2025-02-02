@@ -36,12 +36,13 @@ func set_up_for_round():
 
 
 func player_one_round_won():
+	set_up_for_round()
 	player_one_rounds += 1
-	print(player_one_rounds)
 	if (player_one_rounds >= 5):
-		print("Player One Won!")
 		player_one_rounds_text.text = "Player 1 Won!!!"
 		#player_one_score.addtoScore1()
+	else:
+		player_one_rounds_text.text = "Player 1 Rounds Won: " + str(player_one_rounds) #str() turns integer into a String	
 
 
 func player_two_round_won():
@@ -57,3 +58,7 @@ func player_two_round_won():
 
 func _on_player_1_player_one_dead() -> void:
 	player_two_round_won()
+
+
+func _on_player_2_player_two_dead() -> void:
+	player_one_round_won()

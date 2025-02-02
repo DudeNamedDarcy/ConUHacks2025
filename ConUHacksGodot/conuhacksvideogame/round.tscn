@@ -73,4 +73,5 @@ one_shot = true
 [connection signal="SetUpRound" from="." to="player1" method="_on_round_set_up_round"]
 [connection signal="SetUpRound" from="." to="player2" method="_on_round_set_up_round"]
 [connection signal="PlayerOneDead" from="player1" to="." method="_on_player_1_player_one_dead"]
+[connection signal="PlayerTwoDead" from="player2" to="." method="_on_player_2_player_two_dead"]
 [connection signal="timeout" from="RoundWaitTimer" to="." method="_on_round_wait_timer_timeout"]
