@@ -18,6 +18,8 @@ func _ready() -> void:
 func _physics_process(delta: float) -> void:
 	velocity = Vector2(0, -speed).rotated(direction)
 	move_and_slide()
+	if (Global.in_startup):
+		queue_free()
 
 
 func _on_area_2d_body_entered(body: Node2D) -> void:

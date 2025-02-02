@@ -10,7 +10,7 @@ extends Control
 func _ready() -> void:
 	print(Global.player_one_won)
 	print(Global.player_two_won)
-	Global.in_startup = false
+	Global.in_startup = true
 	$P1.visible = false
 	$P2.visible = false
 	declare_winner()
