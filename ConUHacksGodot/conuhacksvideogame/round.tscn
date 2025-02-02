@@ -37,6 +37,7 @@ animations = [{
 }]
 
 [node name="Round" type="Node2D"]
+position = Vector2(7, 2)
 script = ExtResource("1_6f5yr")
 
 [node name="player1" parent="." instance=ExtResource("1_7wsrx")]
@@ -48,7 +49,7 @@ z_index = 100
 position = Vector2(900, 500)
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(578, 323)
+position = Vector2(577, 322)
 
 [node name="UILayer" type="CanvasLayer" parent="."]
 
@@ -57,8 +58,13 @@ layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 7.0
+offset_top = 2.0
+offset_right = 7.0
+offset_bottom = 2.0
 grow_horizontal = 2
 grow_vertical = 2
+metadata/_edit_use_anchors_ = true
 
 [node name="PlayerOneRoundsText" type="RichTextLabel" parent="UILayer/UI_Control"]
 layout_mode = 1
@@ -75,6 +81,7 @@ theme = ExtResource("5_7d064")
 bbcode_enabled = true
 text = "[center] Player One Rounds Won: [/center]"
 fit_content = true
+metadata/_edit_use_anchors_ = true
 
 [node name="PlayerTwoRoundsText" type="RichTextLabel" parent="UILayer/UI_Control"]
 layout_mode = 0
@@ -86,6 +93,7 @@ theme = ExtResource("5_7d064")
 bbcode_enabled = true
 text = "[center] Player Two Rounds Won: [/center]"
 fit_content = true
+metadata/_edit_use_anchors_ = true
 
 [node name="PlayerOneScoreText" type="RichTextLabel" parent="UILayer/UI_Control"]
 visible = false
@@ -116,9 +124,14 @@ layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 7.0
+offset_top = 2.0
+offset_right = 7.0
+offset_bottom = 2.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.997056, 1)
+metadata/_edit_use_anchors_ = true
 
 [node name="ColorRect" type="ColorRect" parent="CanvasLayer/Control"]
 layout_mode = 1
@@ -132,6 +145,7 @@ offset_bottom = 33.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.054902, 0, 0.14902, 1)
+metadata/_edit_use_anchors_ = true
 
 [node name="RoundWaitTimer" type="Timer" parent="."]
 wait_time = 3.0
@@ -147,6 +161,7 @@ offset_top = 607.0
 offset_right = 218.0
 offset_bottom = 634.0
 step = 1.0
+metadata/_edit_use_anchors_ = true
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Health1"]
 offset_left = 47.0
@@ -156,6 +171,7 @@ offset_bottom = 600.0
 theme = ExtResource("5_7d064")
 bbcode_enabled = true
 text = "[center]You Died!"
+metadata/_edit_use_anchors_ = true
 
 [node name="AudioListener2D" type="AudioListener2D" parent="Health1"]
 
@@ -173,6 +189,7 @@ offset_top = 603.0
 offset_right = 1134.0
 offset_bottom = 630.0
 step = 1.0
+metadata/_edit_use_anchors_ = true
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Health2"]
 offset_left = 958.0
@@ -182,6 +199,7 @@ offset_bottom = 595.0
 theme = ExtResource("5_7d064")
 bbcode_enabled = true
 text = "[center]You Died!"
+metadata/_edit_use_anchors_ = true
 
 [node name="Collisions" type="StaticBody2D" parent="."]
 

@@ -3,6 +3,7 @@ extends Node2D
 @onready var bullet_fire_timer: Timer = $BulletFireTimer
 @onready var main = get_tree().get_root().get_node(".") #gets the top node of the level as a variable
 
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass # Replace with function body.

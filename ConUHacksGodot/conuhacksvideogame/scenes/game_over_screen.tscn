@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://bvqk2bb0fcddk"]
+[gd_scene load_steps=23 format=3 uid="uid://bvqk2bb0fcddk"]
 
 [ext_resource type="Script" path="res://scripts/game_over_screen.gd" id="1_tga0r"]
 [ext_resource type="Script" path="res://scenes/play_again_button.gd" id="2_di51b"]
@@ -6,6 +6,8 @@
 [ext_resource type="Theme" uid="uid://j8m37612a0eo" path="res://SubTitleTheme.tres" id="3_dxyuy"]
 [ext_resource type="Script" path="res://scenes/quit.gd" id="3_w2xpi"]
 [ext_resource type="Texture2D" uid="uid://dhlpos5xfhhg5" path="res://Sprites/Star.png" id="6_r0orv"]
+[ext_resource type="Texture2D" uid="uid://blo76afs68oim" path="res://Sprites/Ship_up_1  .png" id="7_t1ehe"]
+[ext_resource type="Texture2D" uid="uid://c2d2q4lkmx83m" path="res://Sprites/Ship_up_2 .png" id="8_ra3qd"]
 
 [sub_resource type="FontFile" id="FontFile_lptv0"]
 cache/0/16/0/ascent = 0.0
@@ -23,10 +25,6 @@ cache/0/100/0/scale = 1.0
 font = SubResource("FontFile_lptv0")
 font_size = 100
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_xvjxn"]
-atlas = ExtResource("6_r0orv")
-region = Rect2(0, 0, 20, 20)
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_k61jy"]
 atlas = ExtResource("6_r0orv")
 region = Rect2(0, 20, 20, 20)
@@ -35,10 +33,79 @@ region = Rect2(0, 20, 20, 20)
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_xvjxn")
+"texture": SubResource("AtlasTexture_k61jy")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3dec4"]
+atlas = ExtResource("7_t1ehe")
+region = Rect2(0, 0, 20, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b4jsv"]
+atlas = ExtResource("7_t1ehe")
+region = Rect2(20, 0, 20, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6a58h"]
+atlas = ExtResource("7_t1ehe")
+region = Rect2(0, 20, 20, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6rcoc"]
+atlas = ExtResource("7_t1ehe")
+region = Rect2(20, 20, 20, 20)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7k0vb"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3dec4")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_k61jy")
+"texture": SubResource("AtlasTexture_b4jsv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6a58h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6rcoc")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kleye"]
+atlas = ExtResource("8_ra3qd")
+region = Rect2(0, 0, 20, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v8ghy"]
+atlas = ExtResource("8_ra3qd")
+region = Rect2(20, 0, 20, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6nys3"]
+atlas = ExtResource("8_ra3qd")
+region = Rect2(0, 20, 20, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qse3x"]
+atlas = ExtResource("8_ra3qd")
+region = Rect2(20, 20, 20, 20)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_i2x1m"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kleye")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v8ghy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6nys3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qse3x")
 }],
 "loop": true,
 "name": &"default",
@@ -60,28 +127,28 @@ script = ExtResource("1_tga0r")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 0
-offset_left = -1389.0
-offset_top = 387.0
-offset_right = -231.0
-offset_bottom = 1038.0
+offset_left = -1119.0
+offset_top = 393.0
+offset_right = 39.0
+offset_bottom = 1044.0
 color = Color(0, 0, 0, 1)
 
 [node name="Game Over Title" type="Label" parent="."]
 layout_mode = 0
-offset_left = -1247.0
-offset_top = 661.0
-offset_right = -672.0
-offset_bottom = 795.0
+offset_left = -977.0
+offset_top = 667.0
+offset_right = -402.0
+offset_bottom = 801.0
 theme = ExtResource("2_n5vbn")
 text = "GAME OVER!"
 label_settings = SubResource("LabelSettings_4fqjk")
 
 [node name="Who Won Text" type="RichTextLabel" parent="."]
 layout_mode = 0
-offset_left = -1241.0
-offset_top = 806.0
-offset_right = -677.0
-offset_bottom = 1026.0
+offset_left = -971.0
+offset_top = 812.0
+offset_right = -407.0
+offset_bottom = 1032.0
 theme = ExtResource("3_dxyuy")
 bbcode_enabled = true
 text = "[center] [winner shown here] [/center]"
@@ -89,10 +156,10 @@ text = "[center] [winner shown here] [/center]"
 [node name="MarginContainer" type="MarginContainer" parent="."]
 z_index = 1
 layout_mode = 0
-offset_left = -541.0
-offset_top = 659.0
-offset_right = -447.0
-offset_bottom = 725.0
+offset_left = -271.0
+offset_top = 665.0
+offset_right = -177.0
+offset_bottom = 731.0
 scale = Vector2(2.30175, 2.16625)
 size_flags_horizontal = 4
 
@@ -114,15 +181,61 @@ script = ExtResource("3_w2xpi")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
-position = Vector2(-1285, 498)
+position = Vector2(-1015, 504)
 scale = Vector2(8, 8)
 sprite_frames = SubResource("SpriteFrames_3sv8o")
 
 [node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
-position = Vector2(-726.5, 556.5)
-scale = Vector2(2.75, 2.15)
+position = Vector2(-439.5, 541)
+scale = Vector2(4.45, 4.3)
 sprite_frames = SubResource("SpriteFrames_3sv8o")
+
+[node name="AnimatedSprite2D3" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(-134, 487)
+scale = Vector2(6.55, 6.7)
+sprite_frames = SubResource("SpriteFrames_3sv8o")
+
+[node name="AnimatedSprite2D4" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(-458, 843)
+scale = Vector2(5.2, 5.425)
+sprite_frames = SubResource("SpriteFrames_3sv8o")
+
+[node name="AnimatedSprite2D5" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(-973, 897)
+scale = Vector2(5.075, 4.85)
+sprite_frames = SubResource("SpriteFrames_3sv8o")
+
+[node name="AnimatedSprite2D6" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(-670, 981)
+scale = Vector2(4.725, 4.65)
+sprite_frames = SubResource("SpriteFrames_3sv8o")
+
+[node name="AnimatedSprite2D7" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(-133.25, 905)
+scale = Vector2(4.375, 4.1)
+sprite_frames = SubResource("SpriteFrames_3sv8o")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(-536, 713)
+
+[node name="P1" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(-672, 574)
+scale = Vector2(10, 10)
+sprite_frames = SubResource("SpriteFrames_7k0vb")
+autoplay = "default"
+
+[node name="P2" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(-672, 572)
+scale = Vector2(10, 10)
+sprite_frames = SubResource("SpriteFrames_i2x1m")
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/play_again_button" to="." method="_on_play_again_button_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/quit" to="." method="_on_quit_pressed"]
