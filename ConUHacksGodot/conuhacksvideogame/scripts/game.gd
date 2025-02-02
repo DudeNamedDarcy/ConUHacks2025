@@ -28,8 +28,8 @@ signal SetUpRound
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	Global.in_startup = false
-	Global.player_one_won = false
-	Global.player_two_won = false
+	Global.player_one_won = 0
+	Global.player_two_won = 0
 	set_up_for_round()
 	player_one_rounds_text.text = "[center] Player 1 Rounds Won: 0 [/center]" ######################
 	player_two_rounds_text.text = "[center] Player 2 Rounds Won: 0 [/center]" ######################
@@ -52,7 +52,7 @@ func player_one_round_won():
 	player_one_rounds += 1
 	if (player_one_rounds >= 5):
 		player_one_rounds_text.text = "[center] Player 1 Won!!! [/center]"
-		Global.player_one_won = true
+		Global.player_one_won += 10
 		get_tree().change_scene_to_file("res://scenes/game_over_screen.tscn")
 		#player_one_score.addtoScore1()
 	else:
@@ -65,7 +65,7 @@ func player_two_round_won():
 	player_two_rounds += 1
 	if (player_two_rounds >= 5):
 		player_two_rounds_text.text = "Player 2 Won!!!"
-		Global.player_two_won = true
+		Global.player_two_won += 10
 		get_tree().change_scene_to_file("res://scenes/game_over_screen.tscn")
 		#player_two_rounds_text.text = "Player 2 Won!!!"
 		#Global.player_two_score._addtoScore2() #########################################################

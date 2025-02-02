@@ -15,8 +15,8 @@ var winner_player = ""
 var player_one_health = 100
 var player_two_health = 100
 
-var player_one_won = false
-var player_two_won = false
+var player_one_won = 0
+var player_two_won = 0
 
 var in_startup = false
 
