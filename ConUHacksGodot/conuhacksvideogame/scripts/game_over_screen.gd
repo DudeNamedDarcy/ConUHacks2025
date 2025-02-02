@@ -10,7 +10,7 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	pass
+	declare_winner()
 
 func declare_winner():
 	if (Global.player_one_won == true):

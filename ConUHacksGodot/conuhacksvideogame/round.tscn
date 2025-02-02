@@ -63,21 +63,26 @@ anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = 22.0
-offset_top = 9.0
+offset_top = 5.5
 offset_right = -654.0
-offset_bottom = -614.0
+offset_bottom = -600.5
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("5_7d064")
 bbcode_enabled = true
-text = "Player One Rounds Won:"
+text = "[center] Player One Rounds Won: [/center]"
+fit_content = true
 
 [node name="PlayerTwoRoundsText" type="RichTextLabel" parent="UILayer/UI_Control"]
 layout_mode = 0
 offset_left = 510.0
+offset_top = 5.5
 offset_right = 1154.0
-offset_bottom = 38.0
-scale = Vector2(0.971094, 1.29197)
-text = "Player Two Rounds Won:"
+offset_bottom = 47.5
+theme = ExtResource("5_7d064")
+bbcode_enabled = true
+text = "[center] Player Two Rounds Won: [/center]"
+fit_content = true
 
 [node name="PlayerOneScoreText" type="RichTextLabel" parent="UILayer/UI_Control"]
 layout_mode = 0
