@@ -1,6 +1,7 @@
 extends CharacterBody2D
 
 @export var move_speed: float = 250
+@export var health: float = 100
 
 @onready var turret = preload("res://scenes/player_2_turret.tscn")
 @onready var main = get_tree().get_root().get_node(".") #gets the top node of the level as a variable
@@ -17,6 +18,10 @@ func _physics_process(_delta):
 	
 	if Input.is_action_just_pressed("player2SHOOT"):
 		place_turret()
+
+func lost_health():
+	health -= 10
+	print(health)
 
 func place_turret():
 	var turret_instance = turret.instantiate() #creates a clone of the turret

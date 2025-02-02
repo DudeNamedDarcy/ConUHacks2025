@@ -5,6 +5,7 @@ var speed = 100
 var direction: float
 var spawnPosition: Vector2
 var spawnRotation: float
+signal decrease_health_two
 
 func _ready() -> void:
 	global_position = spawnPosition
