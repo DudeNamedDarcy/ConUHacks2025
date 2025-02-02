@@ -1,16 +1,53 @@
-[gd_scene load_steps=4 format=3 uid="uid://db0ve50ddolxv"]
+[gd_scene load_steps=9 format=3 uid="uid://db0ve50ddolxv"]
 
 [ext_resource type="Script" path="res://turret.gd" id="1_p1xoj"]
-[ext_resource type="Texture2D" uid="uid://ccu2evycb2xuf" path="res://icon.svg" id="2_45gpu"]
+[ext_resource type="Texture2D" uid="uid://oh1chhp80s1v" path="res://Sprites/turret1.png" id="2_462vo"]
 [ext_resource type="AudioStream" uid="uid://ch0yyalwnnkmc" path="res://Sounds/Single_gunshot.mp3" id="3_6i6ms"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r2mya"]
+atlas = ExtResource("2_462vo")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bac6p"]
+atlas = ExtResource("2_462vo")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_paaqg"]
+atlas = ExtResource("2_462vo")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nfoij"]
+atlas = ExtResource("2_462vo")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_guhyy"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r2mya")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bac6p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_paaqg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nfoij")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="Player1Turret" type="Node2D"]
 rotation = 1.5708
 script = ExtResource("1_p1xoj")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Sprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
 scale = Vector2(0.5, 0.5)
-texture = ExtResource("2_45gpu")
+sprite_frames = SubResource("SpriteFrames_guhyy")
 
 [node name="BulletFireTimer" type="Timer" parent="."]
 wait_time = 0.5

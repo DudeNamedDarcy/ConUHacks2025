@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://diqwj8oenn8d2"]
+[gd_scene load_steps=6 format=3 uid="uid://diqwj8oenn8d2"]
 
 [ext_resource type="Script" path="res://scripts/start_up_menu.gd" id="1_s11dk"]
 [ext_resource type="Theme" uid="uid://dfjvbpbn8v7j0" path="res://TitleTheme.tres" id="1_v6eoh"]
 [ext_resource type="Theme" uid="uid://j8m37612a0eo" path="res://SubTitleTheme.tres" id="2_6mkbl"]
 [ext_resource type="PackedScene" uid="uid://bibkoy67pb64u" path="res://scenes/player1.tscn" id="3_284oa"]
+[ext_resource type="PackedScene" uid="uid://f2i42fmqfya5" path="res://scenes/player2.tscn" id="5_rca87"]
 
 [node name="StartUpMenu" type="Node2D"]
 script = ExtResource("1_s11dk")
@@ -143,5 +144,8 @@ one_shot = true
 
 [node name="player1" parent="." instance=ExtResource("3_284oa")]
 position = Vector2(351, 357)
+
+[node name="player2" parent="." instance=ExtResource("5_rca87")]
+position = Vector2(753, 489)
 
 [connection signal="timeout" from="CountdownTimer" to="." method="_on_countdown_timer_timeout"]

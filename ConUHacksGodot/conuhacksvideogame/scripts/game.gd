@@ -65,3 +65,7 @@ func _on_player_1_player_one_dead() -> void:
 
 func _on_player_2_player_two_dead() -> void:
 	player_one_round_won()
+
+
+func _on_player_two_dead() -> void:
+	pass # Replace with function body.
