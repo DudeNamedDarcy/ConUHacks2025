@@ -17,7 +17,6 @@ func _physics_process(delta: float) -> void:
 
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
-	
 	if body.name.match("player1"): #checks if body hit is from player1
 		print("hit player one!")
 		queue_free()

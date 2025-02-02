@@ -50,6 +50,7 @@ script = ExtResource("1_wb36v")
 [node name="Sprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 position = Vector2(1.90735e-06, 0)
+rotation = 1.5708
 scale = Vector2(2.114, 2)
 sprite_frames = SubResource("SpriteFrames_w3uht")
 autoplay = "default"
