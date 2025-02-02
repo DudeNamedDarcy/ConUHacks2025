@@ -14,6 +14,7 @@ func _process(delta: float) -> void:
 
 
 func _on_bullet_fire_timer_timeout() -> void:
+	$AudioListener2D/SingleGunshot.play()
 	var bullet = bullet.instantiate()
 	bullet.direction = randf_range(rotation - 0.7, rotation + 0.7)
 	print(bullet.direction)

@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://nueqfa5l5vgl"]
+[gd_scene load_steps=4 format=3 uid="uid://db0ve50ddolxv"]
 
 [ext_resource type="Script" path="res://turret.gd" id="1_p1xoj"]
 [ext_resource type="Texture2D" uid="uid://ccu2evycb2xuf" path="res://icon.svg" id="2_45gpu"]
+[ext_resource type="AudioStream" uid="uid://ch0yyalwnnkmc" path="res://Sounds/Single_gunshot.mp3" id="3_6i6ms"]
 
 [node name="Player1Turret" type="Node2D"]
 rotation = 1.5708
@@ -19,6 +20,11 @@ autostart = true
 wait_time = 3.0
 one_shot = true
 autostart = true
+
+[node name="AudioListener2D" type="AudioListener2D" parent="."]
+
+[node name="SingleGunshot" type="AudioStreamPlayer" parent="AudioListener2D"]
+stream = ExtResource("3_6i6ms")
 
 [connection signal="timeout" from="BulletFireTimer" to="." method="_on_bullet_fire_timer_timeout"]
 [connection signal="timeout" from="DeathTimer" to="." method="_on_death_timer_timeout"]
