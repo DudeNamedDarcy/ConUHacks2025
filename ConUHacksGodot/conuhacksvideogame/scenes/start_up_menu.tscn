@@ -52,22 +52,34 @@ metadata/_edit_use_anchors_ = true
 
 [node name="P1GetReadyText" type="RichTextLabel" parent="CanvasLayer/Player1SetUpText"]
 layout_mode = 0
-offset_top = 50.0
+offset_top = 237.0
 offset_right = 287.0
 offset_bottom = 348.0
 theme = ExtResource("2_6mkbl")
 bbcode_enabled = true
-text = "[center] SHOOT TO GET READY [/center]"
+text = "[center] PLACE TO GET READY [/center]"
 
 [node name="P1ReadyText" type="RichTextLabel" parent="CanvasLayer/Player1SetUpText"]
 layout_mode = 0
-offset_top = 150.0
+offset_top = -42.0
 offset_right = 287.0
-offset_bottom = 339.0
+offset_bottom = 42.0
 theme = ExtResource("2_6mkbl")
 theme_override_colors/default_color = Color(1, 0, 0, 1)
 bbcode_enabled = true
 text = "[center] READY [/center] "
+
+[node name="P1Instructions" type="RichTextLabel" parent="CanvasLayer/Player1SetUpText"]
+layout_mode = 0
+offset_top = 67.0
+offset_right = 287.0
+offset_bottom = 247.0
+theme = ExtResource("2_6mkbl")
+bbcode_enabled = true
+text = "[center] Instructions:
+W, A, S, D to move
+Place Turret:
+R [/center]"
 
 [node name="Player2SetUpText" type="Control" parent="CanvasLayer"]
 layout_mode = 3
@@ -92,22 +104,34 @@ metadata/_edit_use_anchors_ = true
 
 [node name="P2GetReadyText" type="RichTextLabel" parent="CanvasLayer/Player2SetUpText"]
 layout_mode = 0
-offset_top = 50.0
+offset_top = 237.0
 offset_right = 287.0
 offset_bottom = 348.0
 theme = ExtResource("2_6mkbl")
 bbcode_enabled = true
-text = "[center] SHOOT TO GET READY [/center]"
+text = "[center] PLACE TO GET READY [/center]"
 
 [node name="P2ReadyText" type="RichTextLabel" parent="CanvasLayer/Player2SetUpText"]
 layout_mode = 0
-offset_top = 150.0
+offset_top = -42.0
 offset_right = 287.0
-offset_bottom = 339.0
+offset_bottom = 42.0
 theme = ExtResource("2_6mkbl")
 theme_override_colors/default_color = Color(1, 0, 0, 1)
 bbcode_enabled = true
 text = "[center] READY [/center] "
+
+[node name="P1Instructions" type="RichTextLabel" parent="CanvasLayer/Player2SetUpText"]
+layout_mode = 0
+offset_top = 67.0
+offset_right = 287.0
+offset_bottom = 247.0
+theme = ExtResource("2_6mkbl")
+bbcode_enabled = true
+text = "[center] Instructions:
+Arrow Keys to move
+Place Turret:
+Space [/center]"
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(576, 324)

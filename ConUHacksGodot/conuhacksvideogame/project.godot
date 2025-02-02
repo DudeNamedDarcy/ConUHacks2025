@@ -16,6 +16,12 @@ config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
 <<<<<<<HEADrun/main_scene="res://scenes/Timer.tscn"
 
+[autoload]
+
+Global="*res://global.gd"
+Player2="*res://scripts/players/player_2.gd"
+Projectile="*res://scenes/projectile.gd"
+
 [input]
 
 player1UP={
