@@ -5,7 +5,7 @@ var tips_array: Array[String] = [
 	"[center] Tip: Press the Place Turret Button to Place A Deady Turret! [/center]",
 	"[center] Tip: Pressing the Quit Button does not start the game... [/center]",
 	"[center] Tip: This Game basically devolved into a bullet hell. Have fun! [/center]",
-	"[center] Tip: Play Helldivers 2 instead of this game! [/center]",
+	"[center] Tip: Pressing the Y key does absolutely nothing! [/center]",
 	"[center] Tip: Both YOUR turret and the enemy's turret can damage you! Watch out for all bullets! [/center]"
 	]
 @onready var tip_text: RichTextLabel = $TipText

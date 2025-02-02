@@ -10,17 +10,17 @@ config_version=5
 
 [application]
 
-config/name="ConUHacksVideoGame"
+config/name="TurretTerror"
 run/main_scene="res://scenes/main_menu.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
-config/icon="res://icon.svg"
+config/icon="res://Sprites/turret.png"
 <<<<<<<HEADrun/main_scene="res://scenes/Timer.tscn"
 
 [autoload]
 
 Global="*res://global.gd"
-Player2="*res://scripts/players/player_2.gd"
 Projectile="*res://scenes/projectile.gd"
+Player2="*res://scripts/players/player_2.gd"
 Bg="*res://Sounds/BG.tscn"
 
 [display]
