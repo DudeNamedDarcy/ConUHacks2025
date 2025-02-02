@@ -2,6 +2,7 @@ extends Node2D
 @onready var bullet = preload("res://scenes/projectile_turret_two.tscn")
 @onready var bullet_fire_timer: Timer = $BulletFireTimer
 @onready var main = get_tree().get_root().get_node(".") #gets the top node of the level as a variable
+signal damage_health_turret_two
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

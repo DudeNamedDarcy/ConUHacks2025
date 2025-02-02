@@ -27,7 +27,7 @@ func player_one_round_won():
 	if (player_one_rounds >= 5):
 		print("Player One Won!")
 		player_one_rounds_text.text = "Player 1 Won!!!"
-		player_one_score._addtoScore1()
+		player_one_score.addtoScore1()
 		
 	else:
 		player_one_rounds_text.text = "Player 1 Rounds Won: " + str(player_one_rounds) #str() turns integer into a String
@@ -39,6 +39,6 @@ func player_two_round_won():
 	if (player_two_rounds >= 5):
 		print("Player Two Won!")
 		player_two_rounds_text.text = "Player 2 Won!!!"
-		player_two_score._addtoScore2()
+		player_two_score.addtoScore2()
 	else:
 		player_two_rounds_text.text = "Player 2 Rounds Won: " + str(player_two_rounds) #str() turns integer into a String

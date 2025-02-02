@@ -5,6 +5,7 @@ var speed = 100
 var direction: float
 var spawnPosition: Vector2
 var spawnRotation: float
+signal decreaseHealthOne
 
 func _ready() -> void:
 	global_position = spawnPosition
@@ -17,6 +18,7 @@ func _physics_process(delta: float) -> void:
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body.name.match("player1"): #checks if body hit is from player1
+		emit_signal("decreaseHealthOne")
 		print("hit player one!")
 		queue_free()
 
